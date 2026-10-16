@@ -2,78 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tayyaba Beauty Parlour | Johar Town, Gujranwala</title>
-  <meta name="description" content="Tayyaba Beauty Parlour in Johar Town, Gujranwala. High-end bridal makeup, party glam, facial skin care, and couture hair treatments. Call 0310-6577782." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Tayyaba Beauty Parlour | Luxury Bridal Studio & Salon in Johar Town, Gujranwala</title>
+  <meta name="description" content="Tayyaba Beauty Parlour in Johar Town, Gujranwala. Ultra-luxurious bridal makeup, party glam, clinical skin facials, couture hair styling, and AI beauty advisor. Call / WhatsApp 0310-6577782." />
   <meta property="og:title" content="Tayyaba Beauty Parlour - Johar Town, Gujranwala" />
-  <meta property="og:description" content="Premier beauty salon & bridal studio in Johar Town, Gujranwala. Call 0310-6577782." />
-  <meta name="theme-color" content="#1A1A1A" />
+  <meta property="og:description" content="Premier bridal artistry, organic skin facials & couture hair styling in Johar Town, Gujranwala. WhatsApp: 0310-6577782." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2A1A2E" />
 
-  <!-- Google Fonts: Playfair Display & Poppins -->
+  <!-- Google Fonts: Playfair Display (Luxury Serif) & Poppins (Modern Clean Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- FontAwesome Icons 6.5.1 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
     /* ==========================================================================
-       TAYYABA BEAUTY PARLOUR - LUXURY TABBED SPA INTERFACE
-       Palette: Soft Gold (#C5A059), Dark Charcoal (#1A1A1A), Cream (#FAF7F2), Warm Beige (#F3EEE6)
+       TAYYABA BEAUTY PARLOUR - ULTRA-LUXURY DESIGN SYSTEM
+       Mobile-Optimized & 100% Zero-Overflow Geometry
        ========================================================================== */
     :root {
-      --color-gold: #C5A059;
-      --color-gold-light: #DFC38E;
-      --color-gold-dark: #9E7B3B;
-      --color-gold-soft: rgba(197, 160, 89, 0.14);
-      --color-charcoal: #1A1A1A;
-      --color-charcoal-light: #2A2A2A;
-      --color-charcoal-muted: #524E48;
-      --color-cream: #FAF7F2;
-      --color-cream-card: #FFFFFF;
-      --color-beige: #F3EEE6;
-      --color-border: #E8DFD3;
-      --color-text-dark: #1E1D1B;
-      --color-text-muted: #6B655C;
+      --color-plum: #2A1A2E;
+      --color-plum-light: #3D2643;
+      --color-plum-dark: #1E1122;
+      --color-rose-gold: #E8C5C8;
+      --color-rose-gold-light: #F6E6E8;
+      --color-rose-gold-dark: #C9969B;
+      --color-gold: #D4AF37;
+      --color-gold-light: #ECD379;
+      --color-gold-dark: #B59026;
+      --color-gold-soft: rgba(212, 175, 55, 0.12);
+      --color-canvas: #FDFBF9;
+      --color-surface: #FFFFFF;
+      --color-beige: #F7F1EB;
+      --color-border: #EFE6DE;
+      --color-text-main: #231B26;
+      --color-text-muted: #6B5E6E;
       
       --font-heading: 'Playfair Display', Georgia, serif;
       --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       
-      --shadow-subtle: 0 4px 20px rgba(26, 26, 26, 0.05);
-      --shadow-card: 0 8px 30px rgba(197, 160, 89, 0.12);
-      --shadow-hover: 0 14px 40px rgba(197, 160, 89, 0.22);
-      --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-subtle: 0 4px 20px rgba(42, 26, 46, 0.05);
+      --shadow-card: 0 10px 30px rgba(42, 26, 46, 0.08);
+      --shadow-hover: 0 16px 40px rgba(212, 175, 55, 0.18);
+      --transition-smooth: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 22px;
     }
 
-    * {
+    /* 1. PREVENT HORIZONTAL OVERFLOW GLOBALLY */
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
     html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-    }
-
-    body {
+      background-color: var(--color-canvas);
+      color: var(--color-text-main);
       font-family: var(--font-body);
-      background-color: var(--color-cream);
-      color: var(--color-text-dark);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* Allow long text and URLs to wrap safely */
+    p, h1, h2, h3, h4, h5, h6, span, a, li, div, label {
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      box-sizing: border-box;
     }
 
     .container {
       width: 100%;
-      max-width: 1220px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 0 1.5rem;
+      box-sizing: border-box;
     }
 
     /* TYPOGRAPHY */
@@ -85,20 +117,24 @@
       color: var(--color-gold);
     }
 
+    .text-rose {
+      color: var(--color-rose-gold-dark);
+    }
+
     .section-kicker {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       color: var(--color-gold-dark);
       font-weight: 600;
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.75rem;
       display: inline-block;
     }
 
     .page-title {
       font-family: var(--font-heading);
-      font-size: clamp(2rem, 3.6vw, 2.75rem);
-      color: var(--color-charcoal);
+      font-size: clamp(1.85rem, 4vw, 3rem);
+      color: var(--color-plum);
       font-weight: 700;
       line-height: 1.25;
       margin-bottom: 1rem;
@@ -107,20 +143,20 @@
 
     .page-desc {
       color: var(--color-text-muted);
-      font-size: 1.05rem;
+      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
       max-width: 720px;
       line-height: 1.65;
       margin-bottom: 2.5rem;
     }
 
-    /* BUTTONS */
+    /* RESPONSIVE BUTTONS */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.6rem;
-      padding: 0.85rem 1.75rem;
-      font-size: 0.92rem;
+      gap: 0.65rem;
+      padding: 0.85rem 1.65rem;
+      font-size: 0.94rem;
       font-weight: 600;
       border-radius: var(--radius-sm);
       transition: var(--transition-smooth);
@@ -128,62 +164,82 @@
       text-decoration: none;
       border: none;
       outline: none;
-      white-space: nowrap;
+      max-width: 100%;
+      text-align: center;
+      white-space: normal;
     }
 
     .btn-gold {
-      background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+      background: linear-gradient(135deg, #D4AF37 0%, #B89228 100%);
       color: #FFFFFF;
-      box-shadow: 0 6px 18px rgba(197, 160, 89, 0.28);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.32);
     }
 
     .btn-gold:hover {
-      background: linear-gradient(135deg, #C5A059 0%, #9E7B3B 100%);
+      background: linear-gradient(135deg, #E0C055 0%, #A07C1C 100%);
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(197, 160, 89, 0.38);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.42);
     }
 
-    .btn-outline-gold {
-      border: 1px solid var(--color-gold);
-      color: var(--color-gold-dark);
-      background: transparent;
-    }
-
-    .btn-outline-gold:hover {
-      background: var(--color-gold);
+    .btn-plum {
+      background: var(--color-plum);
       color: #FFFFFF;
+      border: 1px solid rgba(232, 197, 200, 0.3);
+    }
+
+    .btn-plum:hover {
+      background: var(--color-plum-dark);
       transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(42, 26, 46, 0.25);
     }
 
-    .btn-dark {
-      background: var(--color-charcoal);
-      color: #FAF7F2;
+    .btn-whatsapp-cta {
+      background: linear-gradient(135deg, #25D366 0%, #1EAE52 100%);
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
     }
 
-    .btn-dark:hover {
-      background: #000000;
+    .btn-whatsapp-cta:hover {
+      background: linear-gradient(135deg, #1EAE52 0%, #178D41 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+    }
+
+    .btn-outline-rose {
+      border: 1px solid var(--color-rose-gold);
+      color: #FFFFFF;
+      background: rgba(232, 197, 200, 0.12);
+      backdrop-filter: blur(6px);
+    }
+
+    .btn-outline-rose:hover {
+      background: var(--color-rose-gold);
+      color: var(--color-plum);
       transform: translateY(-2px);
     }
 
     /* ==========================================================================
-       HEADER & TAB NAVIGATION BAR
+       HEADER & NAVIGATION BAR
        ========================================================================== */
     .header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(250, 247, 242, 0.96);
+      width: 100%;
+      max-width: 100%;
+      background: rgba(253, 251, 249, 0.96);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(232, 223, 211, 0.85);
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: 0 2px 18px rgba(42, 26, 46, 0.04);
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 76px;
+      height: 78px;
+      width: 100%;
     }
 
     .brand-logo {
@@ -191,32 +247,36 @@
       flex-direction: column;
       text-decoration: none;
       cursor: pointer;
+      min-width: 0;
     }
 
     .brand-name {
       font-family: var(--font-heading);
-      font-size: 1.55rem;
+      font-size: clamp(1.35rem, 3.5vw, 1.6rem);
       font-weight: 700;
-      color: var(--color-charcoal);
+      color: var(--color-plum);
       line-height: 1.1;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
     }
 
     .brand-subtitle {
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       text-transform: uppercase;
       letter-spacing: 0.24em;
       color: var(--color-gold-dark);
       font-weight: 600;
+      white-space: nowrap;
     }
 
-    /* Tab navigation buttons */
+    /* Tab navigation pills */
     .tab-nav-list {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.35rem;
       list-style: none;
-      background: #EFE8DC;
-      padding: 0.35rem 0.45rem;
+      background: #F3EAE3;
+      padding: 0.35rem;
       border-radius: 30px;
     }
 
@@ -224,57 +284,58 @@
       font-family: var(--font-body);
       font-size: 0.88rem;
       font-weight: 500;
-      color: var(--color-charcoal-muted);
+      color: var(--color-text-muted);
       background: transparent;
       border: none;
-      padding: 0.55rem 1.25rem;
+      padding: 0.55rem 1.15rem;
       border-radius: 24px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.45rem;
       transition: var(--transition-smooth);
       white-space: nowrap;
     }
 
     .tab-btn i {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
     }
 
     .tab-btn:hover {
-      color: var(--color-charcoal);
+      color: var(--color-plum);
     }
 
     .tab-btn.active {
       background: #FFFFFF;
-      color: var(--color-charcoal);
+      color: var(--color-plum);
       font-weight: 600;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 3px 12px rgba(42, 26, 46, 0.08);
     }
 
     .tab-btn.active i {
-      color: var(--color-gold-dark);
+      color: var(--color-gold);
     }
 
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.75rem;
     }
 
     .btn-call-nav {
-      background: var(--color-charcoal);
-      color: #FAF7F2;
-      padding: 0.65rem 1.35rem;
-      font-size: 0.88rem;
+      background: var(--color-plum);
+      color: #FFFFFF;
+      padding: 0.65rem 1.15rem;
+      font-size: 0.86rem;
       font-weight: 600;
       border-radius: var(--radius-sm);
       display: inline-flex;
       align-items: center;
-      gap: 0.55rem;
+      gap: 0.5rem;
       text-decoration: none;
-      border: 1px solid rgba(197, 160, 89, 0.4);
+      border: 1px solid rgba(232, 197, 200, 0.3);
       transition: var(--transition-smooth);
+      white-space: nowrap;
     }
 
     .btn-call-nav i {
@@ -284,14 +345,13 @@
     .btn-call-nav:hover {
       background: var(--color-gold-dark);
       color: #FFFFFF;
-      border-color: transparent;
       transform: translateY(-1px);
     }
 
     .mobile-menu-toggle {
       display: none;
-      font-size: 1.35rem;
-      color: var(--color-charcoal);
+      font-size: 1.4rem;
+      color: var(--color-plum);
       padding: 0.5rem;
       background: transparent;
       border: none;
@@ -302,11 +362,13 @@
     .mobile-drawer {
       display: none;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.65rem;
       background: #FFFFFF;
       border-bottom: 1px solid var(--color-border);
-      padding: 1.25rem 1.5rem;
+      padding: 1.25rem 1.25rem;
       box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      width: 100%;
+      max-width: 100%;
     }
 
     .mobile-drawer.open {
@@ -317,7 +379,7 @@
       text-align: left;
       font-size: 0.95rem;
       font-weight: 500;
-      color: var(--color-charcoal);
+      color: var(--color-plum);
       padding: 0.75rem 1rem;
       border-radius: var(--radius-sm);
       background: transparent;
@@ -325,6 +387,7 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      width: 100%;
     }
 
     .mobile-tab-btn.active {
@@ -334,20 +397,23 @@
     }
 
     /* ==========================================================================
-       DYNAMIC TAB CONTAINER ARCHITECTURE
-       Only the active tab content is shown; all other sections are hidden!
+       TAB SECTIONS (DISPLAY ONLY ACTIVE TAB)
        ========================================================================== */
     .main-content {
       flex: 1 0 auto;
+      width: 100%;
+      max-width: 100%;
     }
 
     .tab-section {
-      display: none; /* hidden by default */
+      display: none;
+      width: 100%;
+      max-width: 100%;
       animation: tabFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     .tab-section.active {
-      display: block; /* displayed strictly when active */
+      display: block;
     }
 
     @keyframes tabFadeIn {
@@ -366,34 +432,38 @@
        ========================================================================== */
     .home-hero {
       position: relative;
-      min-height: calc(85vh - 76px);
+      min-height: calc(88vh - 78px);
       display: flex;
       align-items: center;
       padding: 4.5rem 0;
-      background: linear-gradient(135deg, rgba(26, 26, 26, 0.86) 0%, rgba(26, 26, 26, 0.68) 100%),
+      width: 100%;
+      max-width: 100%;
+      background: linear-gradient(135deg, rgba(42, 26, 46, 0.9) 0%, rgba(30, 17, 34, 0.76) 100%),
                   url('/src/assets/images/hero_beauty_parlour_1792162870449.jpg') center/cover no-repeat;
       color: #FFFFFF;
       border-bottom: 1px solid var(--color-border);
     }
 
     .home-hero-content {
-      max-width: 760px;
+      max-width: 780px;
+      width: 100%;
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(232, 197, 200, 0.16);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(212, 175, 55, 0.45);
+      border: 1px solid rgba(232, 197, 200, 0.4);
       padding: 0.45rem 1.15rem;
       border-radius: 40px;
       font-size: 0.85rem;
       font-weight: 500;
-      color: #FAF7F2;
+      color: var(--color-rose-gold-light);
       margin-bottom: 1.5rem;
+      max-width: 100%;
     }
 
     .hero-badge i {
@@ -402,7 +472,7 @@
 
     .hero-title {
       font-family: var(--font-heading);
-      font-size: clamp(2.4rem, 5.2vw, 4rem);
+      font-size: clamp(2.1rem, 5vw, 4rem);
       font-weight: 700;
       line-height: 1.15;
       margin-bottom: 1.25rem;
@@ -410,150 +480,174 @@
     }
 
     .hero-title span {
-      background: linear-gradient(135deg, #FAF7F2 30%, #E0C28A 100%);
+      background: linear-gradient(135deg, #FFFFFF 20%, var(--color-rose-gold) 60%, var(--color-gold-light) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero-subtitle {
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-size: clamp(0.98rem, 1.8vw, 1.2rem);
       line-height: 1.7;
-      color: #E8E2D8;
+      color: #E8DEE6;
       margin-bottom: 2.25rem;
-      max-width: 640px;
+      max-width: 660px;
       font-weight: 300;
     }
 
     .hero-btn-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.1rem;
-      margin-bottom: 2.75rem;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      width: 100%;
+      max-width: 100%;
     }
 
-    .hero-quick-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    .hero-highlights-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.75rem;
+      border-top: 1px solid rgba(232, 197, 200, 0.25);
       padding-top: 1.75rem;
-      max-width: 620px;
+      width: 100%;
+      max-width: 100%;
     }
 
-    .stat-number {
-      font-family: var(--font-heading);
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--color-gold-light);
-      line-height: 1.1;
-      margin-bottom: 0.25rem;
+    .hero-highlight-point {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.86rem;
+      color: var(--color-rose-gold-light);
     }
 
-    .stat-text {
-      font-size: 0.82rem;
-      color: #D3CDC2;
+    .hero-highlight-point i {
+      color: var(--color-gold);
+      font-size: 0.95rem;
+      flex-shrink: 0;
     }
 
-    /* Home Features Grid */
-    .home-pillars {
+    /* AUTHENTIC WHY CHOOSE US SECTION */
+    .why-choose-us {
       padding: 5rem 0;
       background: #FFFFFF;
+      border-bottom: 1px solid var(--color-border);
+      width: 100%;
+      max-width: 100%;
     }
 
-    .pillars-grid {
+    .authentic-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.75rem;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 100%;
     }
 
-    .pillar-box {
-      background: var(--color-cream);
-      padding: 2rem 1.75rem;
+    .authentic-box {
+      background: var(--color-canvas);
+      padding: 2rem 1.5rem;
       border-radius: var(--radius-md);
       border: 1px solid var(--color-border);
       transition: var(--transition-smooth);
+      width: 100%;
+      max-width: 100%;
     }
 
-    .pillar-box:hover {
+    .authentic-box:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-card);
-      border-color: rgba(197, 160, 89, 0.5);
+      border-color: rgba(212, 175, 55, 0.45);
     }
 
-    .pillar-icon {
+    .authentic-icon {
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background: var(--color-gold-soft);
-      color: var(--color-gold-dark);
+      background: var(--color-rose-gold-light);
+      color: var(--color-plum);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       margin-bottom: 1.25rem;
+      border: 1px solid rgba(232, 197, 200, 0.5);
+      flex-shrink: 0;
     }
 
-    .pillar-box h3 {
+    .authentic-box h3 {
       font-family: var(--font-heading);
-      font-size: 1.15rem;
-      color: var(--color-charcoal);
-      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--color-plum);
+      margin-bottom: 0.6rem;
+      font-weight: 700;
     }
 
-    .pillar-box p {
+    .authentic-box p {
       font-size: 0.88rem;
       color: var(--color-text-muted);
       line-height: 1.6;
     }
 
-    /* Home Quick Teaser Cards */
-    .home-teasers {
-      padding: 5rem 0;
-      background: var(--color-cream);
+    /* Teaser Strip */
+    .home-teasers-strip {
+      padding: 4.5rem 0;
+      background: var(--color-beige);
+      width: 100%;
+      max-width: 100%;
     }
 
-    .teaser-grid {
+    .teaser-grid-3 {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      width: 100%;
+      max-width: 100%;
     }
 
     .teaser-card {
       background: #FFFFFF;
       border-radius: var(--radius-md);
-      overflow: hidden;
+      padding: 2rem;
       border: 1px solid var(--color-border);
       box-shadow: var(--shadow-subtle);
-      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
     }
 
     .teaser-card h3 {
       font-family: var(--font-heading);
-      font-size: 1.65rem;
-      color: var(--color-charcoal);
-      margin-bottom: 1rem;
+      font-size: 1.35rem;
+      color: var(--color-plum);
+      margin-bottom: 0.75rem;
     }
 
     .teaser-card p {
       color: var(--color-text-muted);
-      font-size: 0.95rem;
-      line-height: 1.65;
+      font-size: 0.92rem;
+      line-height: 1.6;
       margin-bottom: 1.5rem;
+      flex-grow: 1;
     }
 
     /* ==========================================================================
-       TAB 2: SERVICES SECTION (NO PRICES LISTED)
+       TAB 2: SERVICES SECTION (WITH CLEAR PRICE RANGES)
        ========================================================================== */
     .services-page {
-      padding: 5rem 0 6rem 0;
-      background: var(--color-cream);
+      padding: 4.5rem 0 5.5rem 0;
+      background: var(--color-canvas);
+      width: 100%;
+      max-width: 100%;
     }
 
     .services-grid-layout {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2.25rem;
+      gap: 2rem;
+      width: 100%;
+      max-width: 100%;
     }
 
     .luxury-service-card {
@@ -565,12 +659,14 @@
       display: flex;
       flex-direction: column;
       transition: var(--transition-smooth);
+      width: 100%;
+      max-width: 100%;
     }
 
     .luxury-service-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
       box-shadow: var(--shadow-hover);
-      border-color: rgba(197, 160, 89, 0.45);
+      border-color: rgba(212, 175, 55, 0.45);
     }
 
     .card-photo-header {
@@ -578,6 +674,7 @@
       height: 260px;
       background-color: var(--color-beige);
       overflow: hidden;
+      width: 100%;
     }
 
     .card-photo-header img {
@@ -593,46 +690,49 @@
 
     .card-category-badge {
       position: absolute;
-      top: 1.25rem;
-      left: 1.25rem;
-      background: rgba(26, 26, 26, 0.88);
+      top: 1.15rem;
+      left: 1.15rem;
+      background: rgba(42, 26, 46, 0.88);
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
-      color: var(--color-gold-light);
+      color: var(--color-rose-gold);
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       padding: 0.35rem 0.85rem;
       border-radius: 4px;
-      border: 1px solid rgba(212, 175, 55, 0.3);
+      border: 1px solid rgba(232, 197, 200, 0.3);
+      max-width: calc(100% - 2.3rem);
     }
 
     .card-content-area {
-      padding: 2.25rem;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      width: 100%;
+      max-width: 100%;
     }
 
     .card-service-name {
       font-family: var(--font-heading);
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      color: var(--color-charcoal);
-      margin-bottom: 0.85rem;
+      color: var(--color-plum);
+      margin-bottom: 0.75rem;
     }
 
     .card-service-desc {
       color: var(--color-text-muted);
-      font-size: 0.94rem;
+      font-size: 0.92rem;
       line-height: 1.65;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.35rem;
     }
 
     .treatment-feature-list {
       list-style: none;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
       border-top: 1px solid var(--color-border);
       padding-top: 1.25rem;
       flex-grow: 1;
@@ -642,38 +742,248 @@
       display: flex;
       align-items: flex-start;
       gap: 0.75rem;
-      font-size: 0.9rem;
-      color: var(--color-charcoal);
-      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--color-text-main);
+      margin-bottom: 0.7rem;
     }
 
     .treatment-feature-item i {
       color: var(--color-gold);
       margin-top: 4px;
       font-size: 0.8rem;
+      flex-shrink: 0;
     }
 
-    .card-action-bar {
+    /* Fixed Card Pricing Bar without negative margin overflow */
+    .card-pricing-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
       border-top: 1px solid var(--color-border);
-      padding-top: 1.35rem;
+      background: #FAF6F3;
       margin-top: auto;
+      padding: 1.15rem 1.35rem;
+      border-radius: var(--radius-sm);
+      width: 100%;
+      max-width: 100%;
     }
 
-    .consult-note {
-      font-size: 0.82rem;
+    .price-meta-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       color: var(--color-text-muted);
-      font-style: italic;
+      display: block;
+    }
+
+    .price-value-tag {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-plum);
+      white-space: nowrap;
     }
 
     /* ==========================================================================
-       TAB 3: INTERACTIVE AI CONSULTANT
+       TAB 3: PHOTO GALLERY SECTION
+       ========================================================================== */
+    .gallery-page {
+      padding: 4.5rem 0 5.5rem 0;
+      background: var(--color-canvas);
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 2.5rem;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .filter-btn {
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      font-weight: 500;
+      padding: 0.55rem 1.25rem;
+      border-radius: 30px;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .filter-btn:hover {
+      color: var(--color-plum);
+      border-color: var(--color-rose-gold-dark);
+    }
+
+    .filter-btn.active {
+      background: var(--color-plum);
+      color: #FFFFFF;
+      border-color: var(--color-plum);
+      font-weight: 600;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-subtle);
+      cursor: pointer;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(42, 26, 46, 0.1) 0%, rgba(42, 26, 46, 0.9) 100%);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      color: #FFFFFF;
+      transition: var(--transition-smooth);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-gold);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .gallery-title {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: #FFFFFF;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .gallery-caption {
+      font-size: 0.82rem;
+      color: var(--color-rose-gold-light);
+      margin-top: 0.35rem;
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(30, 17, 34, 0.92);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .lightbox-modal.open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 850px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      animation: tabFadeIn 0.3s ease-out;
+    }
+
+    .lightbox-img-wrap {
+      height: clamp(260px, 50vh, 480px);
+      background: #000;
+      width: 100%;
+    }
+
+    .lightbox-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .lightbox-body {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: #FFFFFF;
+      width: 100%;
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: #FFFFFF;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      font-size: 1.1rem;
+      transition: var(--transition-smooth);
+      z-index: 10;
+    }
+
+    .lightbox-close-btn:hover {
+      background: var(--color-gold);
+    }
+
+    /* ==========================================================================
+       TAB 4: AI BEAUTY ADVISOR SECTION
        ========================================================================== */
     .ai-page {
-      padding: 4.5rem 0 6rem 0;
-      background: var(--color-cream);
+      padding: 4.5rem 0 5.5rem 0;
+      background: var(--color-canvas);
+      width: 100%;
+      max-width: 100%;
     }
 
     .ai-app-container {
@@ -683,17 +993,21 @@
       box-shadow: var(--shadow-card);
       overflow: hidden;
       display: grid;
-      grid-template-columns: 350px 1fr;
-      min-height: 600px;
+      grid-template-columns: 360px 1fr;
+      min-height: 580px;
+      width: 100%;
+      max-width: 100%;
     }
 
     .ai-info-pane {
-      background: #1C1C1C;
-      color: #FAF7F2;
-      padding: 2.25rem;
+      background: var(--color-plum);
+      color: #FFFFFF;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      border-right: 1px solid rgba(232, 197, 200, 0.15);
+      width: 100%;
+      max-width: 100%;
     }
 
     .ai-profile-lockup {
@@ -704,15 +1018,17 @@
     }
 
     .ai-avatar-circle {
-      width: 52px;
-      height: 52px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+      background: linear-gradient(135deg, #D4AF37 0%, var(--color-rose-gold-dark) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #FFFFFF;
       font-size: 1.35rem;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+      flex-shrink: 0;
     }
 
     .ai-title-group h3 {
@@ -722,23 +1038,23 @@
     }
 
     .ai-title-group span {
-      font-size: 0.78rem;
-      color: var(--color-gold-light);
+      font-size: 0.76rem;
+      color: var(--color-rose-gold);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     .ai-intro-text {
       font-size: 0.88rem;
-      color: #CFC8BE;
+      color: #E2D7E0;
       line-height: 1.6;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
     }
 
     .prompt-suggestions-title {
       font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       color: var(--color-gold);
       font-weight: 600;
       margin-bottom: 0.85rem;
@@ -749,36 +1065,39 @@
       flex-direction: column;
       gap: 0.65rem;
       margin-bottom: auto;
+      width: 100%;
     }
 
     .prompt-chip {
       text-align: left;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 0.7rem 0.95rem;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(232, 197, 200, 0.2);
+      padding: 0.75rem 1rem;
       border-radius: var(--radius-sm);
-      color: #EFE9E0;
-      font-size: 0.82rem;
+      color: #F8F2F6;
+      font-size: 0.84rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 0.5rem;
       cursor: pointer;
       transition: var(--transition-smooth);
+      width: 100%;
     }
 
     .prompt-chip:hover {
-      background: rgba(197, 160, 89, 0.2);
+      background: rgba(212, 175, 55, 0.22);
       border-color: var(--color-gold);
       color: #FFFFFF;
       transform: translateX(3px);
     }
 
     .ai-pane-footer {
-      margin-top: 2rem;
+      margin-top: 1.75rem;
       padding-top: 1.25rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(232, 197, 200, 0.15);
       font-size: 0.82rem;
-      color: #9E978C;
+      color: #C0B4BE;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -786,23 +1105,27 @@
 
     .ai-pane-footer i {
       color: var(--color-gold);
+      flex-shrink: 0;
     }
 
-    /* Chat Interactive Frame */
+    /* Chat Frame */
     .ai-chat-interface {
       display: flex;
       flex-direction: column;
       height: 100%;
       background: #FFFFFF;
+      width: 100%;
+      max-width: 100%;
     }
 
     .chat-top-bar {
-      padding: 1.25rem 2rem;
+      padding: 1.15rem 1.75rem;
       border-bottom: 1px solid var(--color-border);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #FAF7F2;
+      background: #FAF6F3;
+      width: 100%;
     }
 
     .chat-status-indicator {
@@ -820,18 +1143,19 @@
 
     .chat-scroll-area {
       flex-grow: 1;
-      padding: 1.75rem 2rem;
+      padding: 1.5rem 1.75rem;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
       max-height: 420px;
+      width: 100%;
     }
 
     .chat-msg-row {
       display: flex;
-      gap: 0.85rem;
-      max-width: 85%;
+      gap: 0.75rem;
+      max-width: 88%;
     }
 
     .chat-msg-row.bot {
@@ -844,11 +1168,11 @@
     }
 
     .chat-bubble-avatar {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      background: var(--color-gold-soft);
-      color: var(--color-gold-dark);
+      background: var(--color-rose-gold-light);
+      color: var(--color-plum);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -858,27 +1182,28 @@
     }
 
     .chat-msg-row.user .chat-bubble-avatar {
-      background: var(--color-charcoal);
-      color: #FAF7F2;
+      background: var(--color-plum);
+      color: #FFFFFF;
     }
 
     .chat-msg-bubble {
-      padding: 0.95rem 1.25rem;
+      padding: 0.85rem 1.15rem;
       border-radius: var(--radius-md);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       line-height: 1.6;
+      max-width: 100%;
     }
 
     .chat-msg-row.bot .chat-msg-bubble {
-      background: var(--color-cream);
+      background: var(--color-canvas);
       border: 1px solid var(--color-border);
-      color: var(--color-text-dark);
+      color: var(--color-text-main);
       border-top-left-radius: 2px;
     }
 
     .chat-msg-row.user .chat-msg-bubble {
-      background: var(--color-charcoal);
-      color: #FAF7F2;
+      background: var(--color-plum);
+      color: #FFFFFF;
       border-top-right-radius: 2px;
     }
 
@@ -887,15 +1212,16 @@
       align-items: center;
       gap: 0.45rem;
       margin-top: 0.75rem;
-      padding: 0.45rem 1rem;
-      background: var(--color-gold-soft);
+      padding: 0.5rem 1.1rem;
+      background: #FAF6F3;
       border: 1px solid var(--color-gold);
-      color: var(--color-gold-dark);
+      color: var(--color-plum);
       font-size: 0.82rem;
       font-weight: 600;
       border-radius: 4px;
       cursor: pointer;
       transition: var(--transition-smooth);
+      max-width: 100%;
     }
 
     .chat-btn-action:hover {
@@ -904,44 +1230,48 @@
     }
 
     .chat-composer {
-      padding: 1.25rem 2rem;
+      padding: 1.15rem 1.5rem;
       border-top: 1px solid var(--color-border);
       background: #FFFFFF;
       display: flex;
-      gap: 0.75rem;
+      gap: 0.65rem;
+      width: 100%;
+      max-width: 100%;
     }
 
     .chat-text-input {
-      flex-grow: 1;
-      padding: 0.85rem 1.25rem;
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 0.8rem 1.1rem;
       border: 1px solid var(--color-border);
       border-radius: var(--radius-sm);
       font-family: inherit;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       outline: none;
-      background: var(--color-cream);
+      background: var(--color-canvas);
       transition: var(--transition-smooth);
     }
 
     .chat-text-input:focus {
       border-color: var(--color-gold);
       background: #FFFFFF;
-      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
     }
 
     .chat-submit-btn {
-      background: var(--color-gold);
+      background: var(--color-plum);
       color: #FFFFFF;
-      padding: 0.85rem 1.45rem;
+      padding: 0.8rem 1.35rem;
       border-radius: var(--radius-sm);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.45rem;
       border: none;
       cursor: pointer;
       transition: var(--transition-smooth);
+      flex-shrink: 0;
     }
 
     .chat-submit-btn:hover {
@@ -949,45 +1279,59 @@
     }
 
     /* ==========================================================================
-       TAB 4: CONTACT & LOCATION
+       TAB 5: CONTACT & BOOKING SECTION
        ========================================================================== */
     .contact-page {
-      padding: 5rem 0 6rem 0;
-      background: var(--color-cream);
+      padding: 4.5rem 0 5.5rem 0;
+      background: var(--color-canvas);
+      width: 100%;
+      max-width: 100%;
     }
 
     .contact-layout-split {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      gap: 2.5rem;
+      width: 100%;
+      max-width: 100%;
     }
 
     .contact-card, .appointment-card {
       background: #FFFFFF;
-      padding: 3rem;
+      padding: 2.5rem;
       border-radius: var(--radius-md);
       border: 1px solid var(--color-border);
       box-shadow: var(--shadow-subtle);
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     .contact-row-item {
       display: flex;
       align-items: flex-start;
-      gap: 1.25rem;
-      margin-bottom: 2rem;
+      gap: 1.1rem;
+      margin-bottom: 1.75rem;
+      width: 100%;
     }
 
     .contact-bubble-icon {
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: var(--color-gold-soft);
-      color: var(--color-gold-dark);
+      background: var(--color-rose-gold-light);
+      color: var(--color-plum);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.25rem;
       flex-shrink: 0;
+      border: 1px solid rgba(232, 197, 200, 0.5);
+    }
+
+    .contact-meta-text {
+      flex: 1 1 auto;
+      min-width: 0;
     }
 
     .contact-meta-text h4 {
@@ -1001,8 +1345,8 @@
 
     .contact-meta-text p,
     .contact-meta-text a {
-      font-size: 1.15rem;
-      color: var(--color-charcoal);
+      font-size: clamp(1.05rem, 2.5vw, 1.15rem);
+      color: var(--color-plum);
       font-weight: 600;
       line-height: 1.4;
       text-decoration: none;
@@ -1022,69 +1366,66 @@
     .direct-contact-buttons {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      margin-top: 2rem;
-      padding-top: 2rem;
+      gap: 0.85rem;
+      margin-top: 1.75rem;
+      padding-top: 1.75rem;
       border-top: 1px solid var(--color-border);
-    }
-
-    .btn-whatsapp-action {
-      background: #25D366;
-      color: #FFFFFF;
-    }
-
-    .btn-whatsapp-action:hover {
-      background: #1EBE5D;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+      width: 100%;
     }
 
     .field-group {
-      margin-bottom: 1.35rem;
+      margin-bottom: 1.25rem;
+      width: 100%;
     }
 
     .field-label {
       display: block;
       font-size: 0.85rem;
       font-weight: 600;
-      color: var(--color-charcoal);
+      color: var(--color-plum);
       margin-bottom: 0.45rem;
     }
 
     .field-input {
       width: 100%;
+      max-width: 100%;
       padding: 0.8rem 1rem;
       border: 1px solid var(--color-border);
       border-radius: var(--radius-sm);
       font-family: inherit;
       font-size: 0.92rem;
       outline: none;
-      background: var(--color-cream);
+      background: var(--color-canvas);
       transition: var(--transition-smooth);
+      box-sizing: border-box;
     }
 
     .field-input:focus {
       border-color: var(--color-gold);
       background: #FFFFFF;
-      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
     }
 
     /* ==========================================================================
        FOOTER
        ========================================================================== */
     .footer {
-      background: #141414;
-      color: #FAF7F2;
-      padding: 4.5rem 0 2rem 0;
+      background: var(--color-plum-dark);
+      color: #FAF6F8;
+      padding: 4rem 0 2rem 0;
       border-top: 3px solid var(--color-gold);
       margin-top: auto;
+      width: 100%;
+      max-width: 100%;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1.5fr;
-      gap: 3.5rem;
-      margin-bottom: 3.5rem;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      width: 100%;
+      max-width: 100%;
     }
 
     .footer-brand-title {
@@ -1095,16 +1436,16 @@
     }
 
     .footer-brand-sub {
-      color: var(--color-gold);
+      color: var(--color-rose-gold);
       font-size: 0.68rem;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       margin-bottom: 1.25rem;
       font-weight: 600;
     }
 
     .footer-desc {
-      color: #A6A095;
+      color: #C3B4C0;
       font-size: 0.9rem;
       line-height: 1.65;
       margin-bottom: 1.5rem;
@@ -1113,7 +1454,7 @@
 
     .footer-heading {
       font-family: var(--font-heading);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: #FFFFFF;
       margin-bottom: 1.25rem;
@@ -1141,7 +1482,7 @@
     .footer-tab-link {
       background: transparent;
       border: none;
-      color: #B5AFA4;
+      color: #D6CBD4;
       font-size: 0.88rem;
       text-align: left;
       cursor: pointer;
@@ -1151,7 +1492,7 @@
     }
 
     .footer-tab-link:hover {
-      color: var(--color-gold-light);
+      color: var(--color-gold);
       padding-left: 4px;
     }
 
@@ -1159,67 +1500,81 @@
       display: flex;
       gap: 0.85rem;
       margin-bottom: 1.1rem;
-      color: #B5AFA4;
+      color: #D6CBD4;
       font-size: 0.9rem;
     }
 
     .footer-item-row i {
       color: var(--color-gold);
       margin-top: 4px;
+      flex-shrink: 0;
     }
 
     .footer-bar {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(232, 197, 200, 0.15);
       padding-top: 1.75rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: #8C867B;
+      color: #A99BA6;
       font-size: 0.84rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+      width: 100%;
     }
 
-    /* Floating WhatsApp Button */
-    .floating-whatsapp-btn {
+    /* FLOATING WHATSAPP QUICK-BOOKING WIDGET */
+    .floating-whatsapp-widget {
       position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 999;
-      background: #25D366;
-      color: #FFFFFF;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 1500;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 1.75rem;
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      gap: 0.65rem;
+      background: #25D366;
+      color: #FFFFFF;
+      padding: 0.65rem 1.25rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
       text-decoration: none;
       transition: var(--transition-smooth);
+      max-width: calc(100vw - 3rem);
     }
 
-    .floating-whatsapp-btn:hover {
-      transform: scale(1.08) translateY(-3px);
+    .floating-whatsapp-widget i {
+      font-size: 1.45rem;
+      flex-shrink: 0;
+    }
+
+    .floating-whatsapp-widget:hover {
+      transform: translateY(-3px) scale(1.04);
       box-shadow: 0 12px 30px rgba(37, 211, 102, 0.55);
+      background: #20BD5A;
     }
 
     /* Toast Notification */
     .toast-box {
       position: fixed;
-      bottom: 2rem;
+      bottom: 1.75rem;
       left: 50%;
       transform: translateX(-50%) translateY(100px);
-      background: var(--color-charcoal);
-      color: #FAF7F2;
-      padding: 0.85rem 1.75rem;
+      background: var(--color-plum);
+      color: #FFFFFF;
+      padding: 0.85rem 1.5rem;
       border-radius: var(--radius-sm);
       border-left: 4px solid var(--color-gold);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
       z-index: 10000;
       opacity: 0;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       pointer-events: none;
+      max-width: calc(100vw - 2.5rem);
+      width: max-content;
+      text-align: center;
     }
 
     .toast-box.show {
@@ -1227,41 +1582,163 @@
       opacity: 1;
     }
 
-    /* RESPONSIVE STYLING */
+    /* ==========================================================================
+       MOBILE & TABLET RESPONSIVE FIXES (PREVENT HORIZONTAL SCROLL)
+       ========================================================================== */
     @media (max-width: 1024px) {
       .services-grid-layout { grid-template-columns: 1fr; }
-      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+      .authentic-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .teaser-grid-3 { grid-template-columns: 1fr; }
       .ai-app-container { grid-template-columns: 1fr; }
-      .ai-info-pane { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-      .teaser-grid { grid-template-columns: 1fr; }
+      .ai-info-pane { border-right: none; border-bottom: 1px solid rgba(232, 197, 200, 0.15); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     }
 
     @media (max-width: 768px) {
-      .tab-nav-list, .btn-call-nav { display: none; }
+      /* Force single column layouts */
+      .tab-nav-list, .btn-call-nav { display: none !important; }
       .mobile-menu-toggle { display: block; }
-      .contact-layout-split { grid-template-columns: 1fr; }
-      .pillars-grid { grid-template-columns: 1fr; }
-      .hero-quick-stats { grid-template-columns: 1fr; gap: 1rem; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-bar { flex-direction: column; gap: 0.75rem; text-align: center; }
+      
+      .container {
+        padding: 0 1.15rem;
+      }
+
+      .contact-layout-split {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      .authentic-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bar {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+
+      /* Responsive padding on cards to prevent narrow squeeze */
+      .contact-card, .appointment-card, .teaser-card, .card-content-area, .ai-info-pane {
+        padding: 1.5rem 1.25rem;
+      }
+
+      .home-hero {
+        padding: 3.5rem 0 3rem 0;
+      }
+
+      .hero-btn-row {
+        flex-direction: column;
+      }
+
+      .hero-btn-row .btn {
+        width: 100%;
+      }
+
+      .hero-highlights-strip {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .card-pricing-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.85rem;
+        text-align: center;
+      }
+
+      .card-pricing-bar .btn {
+        width: 100%;
+      }
+
+      .lightbox-body {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 1rem 1.25rem;
+      }
+
+      .lightbox-body .btn {
+        width: 100%;
+      }
+
+      .chat-composer {
+        padding: 0.85rem 1rem;
+      }
+
+      .chat-scroll-area {
+        padding: 1rem;
+      }
+
+      .chat-top-bar {
+        padding: 1rem 1.25rem;
+      }
+
+      /* Floating WhatsApp widget button on mobile */
+      .floating-whatsapp-widget span {
+        display: none;
+      }
+      .floating-whatsapp-widget {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        padding: 0.85rem;
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 0.95rem;
+      }
+
+      .contact-card, .appointment-card, .teaser-card, .card-content-area, .ai-info-pane {
+        padding: 1.25rem 0.95rem;
+      }
+
+      .card-photo-header {
+        height: 220px;
+      }
+
+      .gallery-item img {
+        height: 240px;
+      }
+
+      .header-inner {
+        height: 68px;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- ========================================================================
-       TOP HEADER & TAB CONTROLLER
+       TOP HEADER & NAVIGATION BAR
        ======================================================================== -->
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <!-- Logo / Brand Button (Switches to Home Tab) -->
+        <!-- Logo / Brand Button -->
         <div class="brand-logo" onclick="switchTab('home')" role="button" tabindex="0" aria-label="Tayyaba Beauty Parlour Home">
           <span class="brand-name">Tayyaba</span>
           <span class="brand-subtitle">Beauty Parlour</span>
         </div>
 
-        <!-- Dynamic Single-Page Tab Navigation (NO vertical scrolling) -->
+        <!-- Single-Page Dynamic Tab Navigation (Home, Services, Gallery, AI Advisor, Contact) -->
         <nav aria-label="Parlour Sections">
           <ul class="tab-nav-list">
             <li>
@@ -1277,9 +1754,15 @@
               </button>
             </li>
             <li>
-              <button class="tab-btn" data-tab="ai-consultant" onclick="switchTab('ai-consultant')">
+              <button class="tab-btn" data-tab="gallery" onclick="switchTab('gallery')">
+                <i class="fa-solid fa-images"></i>
+                <span>Gallery</span>
+              </button>
+            </li>
+            <li>
+              <button class="tab-btn" data-tab="ai-advisor" onclick="switchTab('ai-advisor')">
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
-                <span>AI Consultant</span>
+                <span>AI Advisor</span>
               </button>
             </li>
             <li>
@@ -1291,13 +1774,13 @@
           </ul>
         </nav>
 
-        <!-- Quick Call Now Button Linked to tel:03106577782 -->
+        <!-- Quick Call Button Linked to tel:03106577782 -->
         <div class="header-actions">
           <a href="tel:03106577782" class="btn-call-nav" aria-label="Call 0310-6577782">
             <i class="fa-solid fa-phone"></i>
             <span>0310-6577782</span>
           </a>
-          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Drawer">
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Mobile Navigation Drawer">
             <i class="fa-solid fa-bars" id="menuToggleIcon"></i>
           </button>
         </div>
@@ -1307,140 +1790,161 @@
     <!-- Mobile Drawer Tab Navigation -->
     <div class="mobile-drawer" id="mobileDrawer">
       <button class="mobile-tab-btn active" data-tab="home" onclick="switchTab('home')">
-        <i class="fa-solid fa-house"></i> Home
+        <i class="fa-solid fa-house"></i> Home Overview
       </button>
       <button class="mobile-tab-btn" data-tab="services" onclick="switchTab('services')">
-        <i class="fa-solid fa-spa"></i> Services
+        <i class="fa-solid fa-spa"></i> Services & Pricing
       </button>
-      <button class="mobile-tab-btn" data-tab="ai-consultant" onclick="switchTab('ai-consultant')">
-        <i class="fa-solid fa-wand-magic-sparkles"></i> AI Beauty Consultant
+      <button class="mobile-tab-btn" data-tab="gallery" onclick="switchTab('gallery')">
+        <i class="fa-solid fa-images"></i> Photo Gallery
+      </button>
+      <button class="mobile-tab-btn" data-tab="ai-advisor" onclick="switchTab('ai-advisor')">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> AI Beauty Advisor
       </button>
       <button class="mobile-tab-btn" data-tab="contact" onclick="switchTab('contact')">
-        <i class="fa-solid fa-calendar-check"></i> Contact & Appointment
+        <i class="fa-solid fa-calendar-check"></i> Contact & Appointments
       </button>
-      <a href="tel:03106577782" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+      <a href="https://wa.me/923106577782?text=Hello%20Tayyaba%20Beauty%20Parlour,%20I%20want%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-cta" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+      <a href="tel:03106577782" class="btn btn-plum" style="width: 100%; justify-content: center;">
         <i class="fa-solid fa-phone"></i> Call 0310-6577782
       </a>
     </div>
   </header>
 
   <!-- ========================================================================
-       MAIN TABBED VIEWS (ONLY ONE VIEW IS ACTIVE AT A TIME)
+       MAIN TABBED VIEWS (ONLY ONE VIEW IS VISIBLE AT A TIME)
        ======================================================================== -->
   <main class="main-content">
 
     <!-- ======================================================================
-         TAB 1: HOME SECTION (VISIBLE BY DEFAULT)
+         TAB 1: HOME SECTION
          ====================================================================== -->
     <div class="tab-section active" id="tab-home">
-      <!-- Hero Banner -->
+      <!-- Hero Section -->
       <section class="home-hero">
         <div class="container">
           <div class="home-hero-content">
-            <!-- Exact Location Badge -->
+            <!-- Location Badge -->
             <div class="hero-badge">
               <i class="fa-solid fa-location-dot"></i>
               <span>Johar Town, Gujranwala</span>
             </div>
 
             <h1 class="hero-title">
-              Where Elegance Meets <span>Couture Artistry</span>
+              Couture Bridal Artistry & <span>Skin Rejuvenation</span>
             </h1>
 
             <p class="hero-subtitle">
-              Welcome to Gujranwala's cherished sanctuary for bespoke bridal makeovers, clinical-grade skin rejuvenation, and signature hair styling designed to celebrate your authentic radiance.
+              Welcome to Tayyaba Beauty Parlour — Gujranwala's private sanctuary for bespoke bridal makeovers, certified clinical skin facials, and couture hair treatments using 100% authentic luxury cosmetics.
             </p>
 
             <div class="hero-btn-row">
-              <a href="tel:03106577782" class="btn btn-gold">
-                <i class="fa-solid fa-phone"></i> Call 0310-6577782
+              <!-- Prominent WhatsApp CTA as requested -->
+              <a href="https://wa.me/923106577782?text=Hello%20Tayyaba%20Beauty%20Parlour,%20I%20want%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-cta">
+                <i class="fa-brands fa-whatsapp"></i> Book Appointment (WhatsApp)
               </a>
-              <button class="btn btn-outline-gold" onclick="switchTab('services')" style="color: #FAF7F2; border-color: rgba(255,255,255,0.45);">
-                <i class="fa-solid fa-gem"></i> Explore Services
+              <button class="btn btn-outline-rose" onclick="switchTab('services')">
+                <i class="fa-solid fa-spa"></i> View Services & Rates
               </button>
-              <button class="btn btn-dark" onclick="switchTab('ai-consultant')" style="background: rgba(0,0,0,0.6); border: 1px solid rgba(197, 160, 89, 0.4);">
-                <i class="fa-solid fa-wand-magic-sparkles text-gold"></i> AI Beauty Advisor
+              <button class="btn btn-plum" onclick="switchTab('gallery')">
+                <i class="fa-solid fa-images text-gold"></i> View Gallery
               </button>
             </div>
 
-            <div class="hero-quick-stats">
-              <div>
-                <div class="stat-number">1,500+</div>
-                <div class="stat-text">Brides Styled in Gujranwala</div>
+            <div class="hero-highlights-strip">
+              <div class="hero-highlight-point">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Strict Autoclave Hygiene</span>
               </div>
-              <div>
-                <div class="stat-number">100%</div>
-                <div class="stat-text">Certified Authentic Luxury Brands</div>
+              <div class="hero-highlight-point">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Certified Senior Artists</span>
               </div>
-              <div>
-                <div class="stat-number">5.0 ★</div>
-                <div class="stat-text">Client Trust & Satisfaction</div>
+              <div class="hero-highlight-point">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Dior · MAC · Huda Beauty</span>
+              </div>
+              <div class="hero-highlight-point">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Private VIP Bridal Suites</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Why Choose Tayyaba Beauty Parlour Pillars -->
-      <section class="home-pillars">
+      <!-- Authentic Why Choose Us Section (No fake reviews or star ratings) -->
+      <section class="why-choose-us">
         <div class="container">
-          <div style="text-align: center; max-width: 680px; margin: 0 auto 3.5rem auto;">
-            <span class="section-kicker">The Tayyaba Distinction</span>
-            <h2 class="page-title">Personalized Care in Johar Town</h2>
+          <div style="text-align: center; max-width: 680px; margin: 0 auto 3rem auto;">
+            <span class="section-kicker">Authentic Standards</span>
+            <h2 class="page-title">Why Choose Tayyaba Beauty Parlour</h2>
             <p class="page-desc" style="margin-bottom: 0;">
-              Every woman deserves a calming, high-end environment with certified aestheticians and unhurried luxury pampering.
+              We take pride in transparent practices, hospital-level sterilization, and dedicated personal attention for every client in Johar Town, Gujranwala.
             </p>
           </div>
 
-          <div class="pillars-grid">
-            <div class="pillar-box">
-              <div class="pillar-icon"><i class="fa-solid fa-gem"></i></div>
-              <h3>Bespoke Bridal Looks</h3>
-              <p>Custom contouring, jewelry positioning, and long-wear HD makeups tailored strictly to your wedding attire.</p>
+          <div class="authentic-grid">
+            <div class="authentic-box">
+              <div class="authentic-icon"><i class="fa-solid fa-pump-medical"></i></div>
+              <h3>Hospital-Grade Hygiene</h3>
+              <p>Every makeup brush, facial tool, and hair accessory is thoroughly sterilized between clients. We use disposable applicators for sensitive eye and lip artistry.</p>
             </div>
 
-            <div class="pillar-box">
-              <div class="pillar-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
-              <h3>Original Luxury Brands</h3>
-              <p>Only authentic international cosmetics (Dior, MAC, Huda Beauty, NARS) ensuring safe, radiant results.</p>
+            <div class="authentic-box">
+              <div class="authentic-icon"><i class="fa-solid fa-award"></i></div>
+              <h3>Certified Artists</h3>
+              <p>Our senior aestheticians and bridal stylists hold professional certifications in advanced skin histology, airbrush makeup, and hair chemical safety.</p>
             </div>
 
-            <div class="pillar-box">
-              <div class="pillar-icon"><i class="fa-solid fa-shield-heart"></i></div>
-              <h3>Sterilized Hygiene</h3>
-              <p>Strict clinical cleanliness standards with sanitized brushes, fresh tools, and private dressing rooms.</p>
+            <div class="authentic-box">
+              <div class="authentic-icon"><i class="fa-solid fa-certificate"></i></div>
+              <h3>100% Genuine Cosmetics</h3>
+              <p>We source certified original international brands (MAC, NARS, Huda Beauty, Dermalogica). No local dupes, steroid whitening creams, or harsh expired products.</p>
             </div>
 
-            <div class="pillar-box">
-              <div class="pillar-icon"><i class="fa-solid fa-clock"></i></div>
-              <h3>Dedicated Timings</h3>
-              <p>Open Monday to Sunday (10:30 AM – 8:30 PM) in Johar Town, Gujranwala with early bridal appointments available.</p>
+            <div class="authentic-box">
+              <div class="authentic-icon"><i class="fa-solid fa-comments"></i></div>
+              <h3>1-on-1 Consultation</h3>
+              <p>We conduct thorough skin and hair diagnostics prior to any treatment, allocating generous, unhurried appointment blocks in private suites.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Quick Action Teasers -->
-      <section class="home-teasers">
+      <!-- Teaser Cards -->
+      <section class="home-teasers-strip">
         <div class="container">
-          <div class="teaser-grid">
+          <div class="teaser-grid-3">
             <div class="teaser-card">
-              <span class="section-kicker">Signature Care</span>
-              <h3>Explore Our High-End Services</h3>
-              <p>Discover our curated portfolio of bridal makeovers, party glam, restorative skin facials, and hair smoothing treatments.</p>
-              <button class="btn btn-gold" onclick="switchTab('services')">
+              <span class="section-kicker">Signature Services</span>
+              <h3>Explore Our Rates & Packages</h3>
+              <p>Browse our transparent service offerings including Barat bridal makeup, engagement glam, Hydra-Glow facials, and protein hair spa treatments.</p>
+              <button class="btn btn-plum" onclick="switchTab('services')" style="width: 100%;">
                 <span>View All Services</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
 
             <div class="teaser-card">
+              <span class="section-kicker">Visual Showcase</span>
+              <h3>Browse Real Salon Portfolio</h3>
+              <p>Inspect our curated photo gallery showcasing actual bridal styling, Mehndi makeovers, glowing skincare treatments, and elegant hairstyles.</p>
+              <button class="btn btn-gold" onclick="switchTab('gallery')" style="width: 100%;">
+                <span>Open Photo Gallery</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="teaser-card">
               <span class="section-kicker">Interactive Tech</span>
-              <h3>Consult Our AI Beauty Advisor</h3>
-              <p>Get personalized recommendations on bridal timelines, customized facials, and hair treatments suited to your schedule.</p>
-              <button class="btn btn-dark" onclick="switchTab('ai-consultant')">
+              <h3>Consult Our AI Advisor</h3>
+              <p>Unsure which facial matches your skin texture, or when to start your pre-bridal regimen? Ask our intelligent virtual consultant for instant advice.</p>
+              <button class="btn btn-plum" onclick="switchTab('ai-advisor')" style="width: 100%;">
                 <i class="fa-solid fa-wand-magic-sparkles text-gold"></i>
-                <span>Open AI Advisor</span>
+                <span>Ask AI Advisor</span>
               </button>
             </div>
           </div>
@@ -1449,16 +1953,16 @@
     </div>
 
     <!-- ======================================================================
-         TAB 2: SERVICES SECTION (NO PRICES LISTED ANYWHERE)
+         TAB 2: SERVICES SECTION (WITH CLEAR PRICES / PRICE RANGES)
          ====================================================================== -->
     <div class="tab-section" id="tab-services">
       <div class="services-page">
         <div class="container">
-          <div style="text-align: center; max-width: 720px; margin: 0 auto 3.5rem auto;">
-            <span class="section-kicker">Our Offerings</span>
-            <h1 class="page-title">Curated Beauty & Wellness Services</h1>
+          <div style="text-align: center; max-width: 740px; margin: 0 auto 3rem auto;">
+            <span class="section-kicker">Transparent Offerings</span>
+            <h1 class="page-title">Curated Beauty Services & Pricing</h1>
             <p class="page-desc" style="margin-bottom: 0;">
-              Indulge in meticulous bridal transformations, specialized skin therapy, and couture hair artistry at Johar Town, Gujranwala. Each treatment is tailored to your individual beauty.
+              Explore our luxury beauty treatments crafted with original cosmetics and sterilized tools. All rates are listed transparently with no hidden fees.
             </p>
           </div>
 
@@ -1472,19 +1976,21 @@
               <div class="card-content-area">
                 <h3 class="card-service-name">Bridal Makeup Artistry</h3>
                 <p class="card-service-desc">
-                  Exquisite, customized wedding makeovers crafted to withstand all emotional moments. Our bridal specialists use premium luxury foundations and waterproof sealants for an all-day luminous finish.
+                  Signature Barat and Walima bridal makeovers utilizing waterproof, 18-hour HD foundation sealants and tailored color palettes suited to your bridal lehenga and undertone.
                 </p>
                 <ul class="treatment-feature-list">
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Barat & Walima Signature Bridal Looks</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Airbrush & Waterproof HD Foundation Base</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Barat & Walima Signature Bridal Makeovers</li>
                   <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Complete Dupatta Setting & Heavy Jewelry Fixing</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Complimentary Lash Application & Lip Contour</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Waterproof Airbrush Base with Dior & Huda Beauty</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Premium Mink Lash Application & Custom Contour</li>
                 </ul>
-                <div class="card-action-bar">
-                  <span class="consult-note">Private VIP Bridal Suite</span>
-                  <button class="btn btn-gold" onclick="openBookingFor('Bridal Makeup Artistry')">
-                    <i class="fa-solid fa-calendar-check"></i>
-                    <span>Inquire / Book</span>
+                <div class="card-pricing-bar">
+                  <div>
+                    <span class="price-meta-label">Package Range</span>
+                    <span class="price-value-tag">PKR 15,000 – 35,000</span>
+                  </div>
+                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Bridal Makeup Artistry (PKR 15,000 – 35,000)')">
+                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
                   </button>
                 </div>
               </div>
@@ -1493,52 +1999,56 @@
             <!-- 2. Party Makeup -->
             <div class="luxury-service-card">
               <div class="card-photo-header">
-                <img src="/src/assets/images/service_bridal_makeup_1792162872391.jpg" alt="Party Makeup at Tayyaba Beauty Parlour" onerror="this.src='https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80'" />
-                <span class="card-category-badge">Special Occasions</span>
+                <img src="/src/assets/images/gallery_party_glam_1792169993592.jpg" alt="Party Makeup at Tayyaba Beauty Parlour" onerror="this.src='https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80'" />
+                <span class="card-category-badge">Event & Nikkah Glam</span>
               </div>
               <div class="card-content-area">
                 <h3 class="card-service-name">Party & Engagement Glam</h3>
                 <p class="card-service-desc">
-                  Whether you are the sister of the bride, attending a festive evening gala, or celebrating your Nikkah, our party glam delivers effortless elegance suited to your personal style.
+                  Effortless, luminous evening makeovers for weddings, dinners, and pre-wedding celebrations. Customized from soft dewy finishes to bold smokey eyes.
                 </p>
                 <ul class="treatment-feature-list">
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Soft Glam, Dewy, or High-Definition Matte Finishes</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Subtle or Dramatic Cut-Crease Eye Styling</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Custom Highlighting & Facial Contouring</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Party Hairstyle & Setting Included</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> High-Definition Dewy or Matte Party Base</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Glamorous Smokey Eyes or Shimmer Cut-Crease</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Includes Signature Hairstyle (Curls, Blowdry, Updo)</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Long-Lasting Waterproof Setting Spray</li>
                 </ul>
-                <div class="card-action-bar">
-                  <span class="consult-note">Quick & Long-Lasting</span>
-                  <button class="btn btn-gold" onclick="openBookingFor('Party & Engagement Glam')">
-                    <i class="fa-solid fa-calendar-check"></i>
-                    <span>Inquire / Book</span>
+                <div class="card-pricing-bar">
+                  <div>
+                    <span class="price-meta-label">Package Range</span>
+                    <span class="price-value-tag">PKR 4,500 – 8,500</span>
+                  </div>
+                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Party & Engagement Glam (PKR 4,500 – 8,500)')">
+                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
                   </button>
                 </div>
               </div>
             </div>
 
-            <!-- 3. Facials & Skin Care -->
+            <!-- 3. Skin Care & Facials -->
             <div class="luxury-service-card">
               <div class="card-photo-header">
                 <img src="/src/assets/images/service_skincare_facial_1792162872276.jpg" alt="Facials and Skin Care at Tayyaba Beauty Parlour" onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80'" />
                 <span class="card-category-badge">Clinical & Organic</span>
               </div>
               <div class="card-content-area">
-                <h3 class="card-service-name">Facials & Skin Rejuvenation</h3>
+                <h3 class="card-service-name">Facials & Skin Therapy</h3>
                 <p class="card-service-desc">
-                  Targeted facial therapies designed to unclog pores, reverse environmental pollution damage, replenish moisture, and restore a youthful, luminous complexion.
+                  Medical-grade and organic facial therapies that clear deep impurities, soothe inflammation, reduce hyperpigmentation, and restore radiant elasticity.
                 </p>
                 <ul class="treatment-feature-list">
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Hydra-Glow Deep Pore Cleansing Facial</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> 24K Pure Gold Luxury Radiance Therapy</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Herbal Brightening & Sun-Tan Correction</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Ultrasonic Exfoliation & Soothing Botanical Masks</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Hydra-Glow 7-Step Deep Cleansing Facial</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> 24K Luxury Gold Leaf Radiance Therapy</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Organic Brightening & Sun-Damage Correction</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Ultrasonic Blackhead Extraction & Collagen Mask</li>
                 </ul>
-                <div class="card-action-bar">
-                  <span class="consult-note">Custom Skin Analysis</span>
-                  <button class="btn btn-gold" onclick="openBookingFor('Facials & Skin Rejuvenation')">
-                    <i class="fa-solid fa-calendar-check"></i>
-                    <span>Inquire / Book</span>
+                <div class="card-pricing-bar">
+                  <div>
+                    <span class="price-meta-label">Package Range</span>
+                    <span class="price-value-tag">PKR 3,500 – 9,500</span>
+                  </div>
+                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Facials & Skin Therapy (PKR 3,500 – 9,500)')">
+                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
                   </button>
                 </div>
               </div>
@@ -1548,24 +2058,26 @@
             <div class="luxury-service-card">
               <div class="card-photo-header">
                 <img src="/src/assets/images/service_hair_styling_1792162872324.jpg" alt="Hair Styling & Treatments at Tayyaba Beauty Parlour" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80'" />
-                <span class="card-category-badge">Hair Care & Artistry</span>
+                <span class="card-category-badge">Restoration & Styling</span>
               </div>
               <div class="card-content-area">
                 <h3 class="card-service-name">Hair Styling & Treatments</h3>
                 <p class="card-service-desc">
-                  Transform dry, damaged, or unruly tresses into silky, voluminous locks with our professional salon treatments and bridal hair designs.
+                  Professional keratin smoothing, intensive argan protein repairs, and couture bridal hair designs for lustrous, frizz-resistant hair.
                 </p>
                 <ul class="treatment-feature-list">
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Keratin & Hair Botox Smoothing Therapy</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Keratin & Brazilian Protein Smoothing Therapy</li>
                   <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Couture Bridal Updos & Textured Hollywood Waves</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Argan Oil & Protein Restorative Hair Spa</li>
-                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Balayage, Streaking & Gloss Toner Treatments</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Intensive Argan Protein Deep Conditioning Spa</li>
+                  <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Balayage, Streaking & Gloss Toner Application</li>
                 </ul>
-                <div class="card-action-bar">
-                  <span class="consult-note">Premium Formulations</span>
-                  <button class="btn btn-gold" onclick="openBookingFor('Hair Styling & Treatments')">
-                    <i class="fa-solid fa-calendar-check"></i>
-                    <span>Inquire / Book</span>
+                <div class="card-pricing-bar">
+                  <div>
+                    <span class="price-meta-label">Package Range</span>
+                    <span class="price-value-tag">PKR 5,000 – 18,000</span>
+                  </div>
+                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Hair Styling & Treatments (PKR 5,000 – 18,000)')">
+                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
                   </button>
                 </div>
               </div>
@@ -1576,21 +2088,110 @@
     </div>
 
     <!-- ======================================================================
-         TAB 3: INTERACTIVE AI CONSULTANT SECTION
+         TAB 3: PHOTO GALLERY SECTION
          ====================================================================== -->
-    <div class="tab-section" id="tab-ai-consultant">
+    <div class="tab-section" id="tab-gallery">
+      <div class="gallery-page">
+        <div class="container">
+          <div style="text-align: center; max-width: 720px; margin: 0 auto 2.5rem auto;">
+            <span class="section-kicker">Visual Portfolio</span>
+            <h1 class="page-title">Salon & Bridal Photo Gallery</h1>
+            <p class="page-desc" style="margin-bottom: 0;">
+              Explore our real salon environment, bridal portfolio, and signature makeovers in Johar Town, Gujranwala. Click any image to view enlarged.
+            </p>
+          </div>
+
+          <!-- Gallery Filter Buttons -->
+          <div class="gallery-filters">
+            <button class="filter-btn active" onclick="filterGallery('all')">All Works</button>
+            <button class="filter-btn" onclick="filterGallery('bridal')">Bridal Makeovers</button>
+            <button class="filter-btn" onclick="filterGallery('party')">Party Glam</button>
+            <button class="filter-btn" onclick="filterGallery('hair-skin')">Hair & Skin Care</button>
+            <button class="filter-btn" onclick="filterGallery('salon')">Salon Interior</button>
+          </div>
+
+          <!-- Gallery Grid -->
+          <div class="gallery-grid" id="galleryContainer">
+            <!-- 1. Signature Barat Bridal -->
+            <div class="gallery-item" data-category="bridal" onclick="openLightbox('/src/assets/images/service_bridal_makeup_1792162872391.jpg', 'Signature Barat Bridal Look', 'Waterproof HD base, maroon velvet lehenga styling, authentic gold jewelry coordination.')">
+              <img src="/src/assets/images/service_bridal_makeup_1792162872391.jpg" alt="Signature Barat Bridal Look" onerror="this.src='https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80'" />
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Bridal Speciality</span>
+                <h4 class="gallery-title">Signature Barat Bride</h4>
+                <p class="gallery-caption">Waterproof HD base, jewelry fixing & dupatta draping</p>
+              </div>
+            </div>
+
+            <!-- 2. Mehndi Bridal Glam -->
+            <div class="gallery-item" data-category="bridal" onclick="openLightbox('/src/assets/images/gallery_mehndi_bride_1792169994231.jpg', 'Festive Mehndi Bridal Glam', 'Luminous dewy makeup with fresh yellow floral jewelry and textured braids.')">
+              <img src="/src/assets/images/gallery_mehndi_bride_1792169994231.jpg" alt="Festive Mehndi Bridal Glam" onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80'" />
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Bridal Speciality</span>
+                <h4 class="gallery-title">Festive Mehndi Look</h4>
+                <p class="gallery-caption">Dewy radiance paired with handcrafted floral jewelry</p>
+              </div>
+            </div>
+
+            <!-- 3. Soft Glam Party Makeover -->
+            <div class="gallery-item" data-category="party" onclick="openLightbox('/src/assets/images/gallery_party_glam_1792169993592.jpg', 'Soft Glam Party Makeup', 'Champagne shimmer lids, precision winged eyeliner, and sophisticated nude lips.')">
+              <img src="/src/assets/images/gallery_party_glam_1792169993592.jpg" alt="Soft Glam Party Makeup" onerror="this.src='https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80'" />
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Party Glam</span>
+                <h4 class="gallery-title">Emerald Silk Gala Glam</h4>
+                <p class="gallery-caption">Chic modern chignon with radiant skin contour</p>
+              </div>
+            </div>
+
+            <!-- 4. Clinical Skin Care & Facial -->
+            <div class="gallery-item" data-category="hair-skin" onclick="openLightbox('/src/assets/images/service_skincare_facial_1792162872276.jpg', 'Clinical Hydra-Glow Facial', 'Relaxing organic serum infusion, jade roller lymphatic massage, and pore detox.')">
+              <img src="/src/assets/images/service_skincare_facial_1792162872276.jpg" alt="Clinical Hydra-Glow Facial" onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80'" />
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Skin Care</span>
+                <h4 class="gallery-title">Hydra-Glow Facial Session</h4>
+                <p class="gallery-caption">Deep pore purification with active botanical serums</p>
+              </div>
+            </div>
+
+            <!-- 5. Couture Hollywood Waves -->
+            <div class="gallery-item" data-category="hair-skin" onclick="openLightbox('/src/assets/images/service_hair_styling_1792162872324.jpg', 'Bridal Hollywood Waves', 'Glossy voluminous textured waves accented with pearl hairpins.')">
+              <img src="/src/assets/images/service_hair_styling_1792162872324.jpg" alt="Bridal Hollywood Waves" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80'" />
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Hair Artistry</span>
+                <h4 class="gallery-title">Bridal Hair Waves</h4>
+                <p class="gallery-caption">Glossy silk finish with baby breath and pearl pins</p>
+              </div>
+            </div>
+
+            <!-- 6. Salon Interior in Johar Town -->
+            <div class="gallery-item" data-category="salon" onclick="openLightbox('/src/assets/images/hero_beauty_parlour_1792162870449.jpg', 'Luxury Parlour Interior', 'Johar Town, Gujranwala studio with warm lighting, private styling suites, and marble accents.')">
+              <img src="/src/assets/images/hero_beauty_parlour_1792162870449.jpg" alt="Luxury Salon Interior" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80'" />
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Studio Ambience</span>
+                <h4 class="gallery-title">Johar Town Salon Suite</h4>
+                <p class="gallery-caption">Clean, tranquil, female-only private dressing suites</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         TAB 4: AI BEAUTY ADVISOR SECTION
+         ====================================================================== -->
+    <div class="tab-section" id="tab-ai-advisor">
       <div class="ai-page">
         <div class="container">
-          <div style="text-align: center; max-width: 720px; margin: 0 auto 3rem auto;">
-            <span class="section-kicker">Interactive Beauty Tech</span>
-            <h1 class="page-title">Tayyaba Virtual Beauty Advisor</h1>
+          <div style="text-align: center; max-width: 720px; margin: 0 auto 2.5rem auto;">
+            <span class="section-kicker">Interactive Consultation</span>
+            <h1 class="page-title">Tayyaba AI Beauty Advisor</h1>
             <p class="page-desc" style="margin-bottom: 0;">
-              Have questions about which facial suits your skin type, bridal makeup preparations, or hair treatments? Consult our smart advisor for immediate guidance.
+              Get instant advice on bridal timelines, package recommendations, skin diagnostics, and treatment procedures tailored for Tayyaba Beauty Parlour.
             </p>
           </div>
 
           <div class="ai-app-container">
-            <!-- Left Info & Prompt Chips Pane -->
+            <!-- Left Info Pane -->
             <div class="ai-info-pane">
               <div class="ai-profile-lockup">
                 <div class="ai-avatar-circle">
@@ -1603,39 +2204,39 @@
               </div>
 
               <p class="ai-intro-text">
-                Trained on Tayyaba Beauty Parlour's specialized service protocols, bridal prep timelines, and skin diagnostic regimens.
+                Programmed with our parlour's authentic skincare regimens, bridal prep timelines, and exact service pricing for Johar Town, Gujranwala.
               </p>
 
-              <span class="prompt-suggestions-title">Tap to Ask Instantly</span>
+              <span class="prompt-suggestions-title">Tap to Inquire Instantly</span>
               <div class="prompt-buttons-stack">
-                <button class="prompt-chip" onclick="handlePromptClick('What is the best facial for dull or sensitive skin?')">
-                  <span>Best facial for dull skin?</span>
+                <button class="prompt-chip" onclick="handlePromptClick('What are your bridal makeup packages and prices?')">
+                  <span>Bridal packages & prices?</span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </button>
-                <button class="prompt-chip" onclick="handlePromptClick('When should I begin my bridal makeup prep?')">
-                  <span>Bridal prep timeline?</span>
+                <button class="prompt-chip" onclick="handlePromptClick('Which facial is best for dull or pigmented skin?')">
+                  <span>Facial for dull skin?</span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </button>
-                <button class="prompt-chip" onclick="handlePromptClick('How does the keratin smoothing treatment work?')">
-                  <span>Keratin hair treatment details?</span>
+                <button class="prompt-chip" onclick="handlePromptClick('What is the cost of keratin hair smoothing treatment?')">
+                  <span>Keratin treatment cost?</span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </button>
-                <button class="prompt-chip" onclick="handlePromptClick('What are your salon opening timings in Johar Town?')">
-                  <span>Parlour timings & location?</span>
+                <button class="prompt-chip" onclick="handlePromptClick('What are your salon opening timings and address in Gujranwala?')">
+                  <span>Timings & parlour location?</span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </button>
               </div>
 
               <div class="ai-pane-footer">
                 <i class="fa-solid fa-phone"></i>
-                <span>Direct parlour phone: 0310-6577782</span>
+                <span>Direct Line: 0310-6577782</span>
               </div>
             </div>
 
             <!-- Right Interactive Chat -->
             <div class="ai-chat-interface">
               <div class="chat-top-bar">
-                <div style="font-family: var(--font-heading); font-weight: 700; color: var(--color-charcoal);">
+                <div style="font-family: var(--font-heading); font-weight: 700; color: var(--color-plum);">
                   Live Beauty Consultation
                 </div>
                 <div class="chat-status-indicator">
@@ -1649,13 +2250,13 @@
                   <div class="chat-bubble-avatar"><i class="fa-solid fa-spa"></i></div>
                   <div class="chat-msg-bubble">
                     Hello! Welcome to <strong>Tayyaba Beauty Parlour</strong> in Johar Town, Gujranwala. ✨<br />
-                    I am your personal beauty advisor. Feel free to ask me about our <strong>bridal makeovers</strong>, <strong>facials & skin therapies</strong>, or <strong>hair treatments</strong>!
+                    I am your AI beauty consultant. Feel free to ask me about our <strong>bridal packages (PKR 15k–35k)</strong>, <strong>party makeup</strong>, <strong>skin facials</strong>, or hair smoothing treatments!
                   </div>
                 </div>
               </div>
 
               <form class="chat-composer" id="aiChatForm" onsubmit="handleChatSubmit(event)">
-                <input type="text" id="chatInputField" class="chat-text-input" placeholder="Ask about bridal looks, skin regimens, hair care, or salon timings..." autocomplete="off" />
+                <input type="text" id="chatInputField" class="chat-text-input" placeholder="Type your question (e.g. bridal makeup price, hydra facial, timings)..." autocomplete="off" />
                 <button type="submit" class="chat-submit-btn" aria-label="Send query">
                   <span>Ask</span>
                   <i class="fa-solid fa-paper-plane"></i>
@@ -1668,91 +2269,91 @@
     </div>
 
     <!-- ======================================================================
-         TAB 4: CONTACT & BOOKING SECTION
+         TAB 5: CONTACT & BOOKING SECTION
          ====================================================================== -->
     <div class="tab-section" id="tab-contact">
       <div class="contact-page">
         <div class="container">
-          <div style="text-align: center; max-width: 720px; margin: 0 auto 3.5rem auto;">
-            <span class="section-kicker">Visit or Reserve</span>
-            <h1 class="page-title">Contact Tayyaba Beauty Parlour</h1>
+          <div style="text-align: center; max-width: 720px; margin: 0 auto 3rem auto;">
+            <span class="section-kicker">Connect With Us</span>
+            <h1 class="page-title">Visit or Book an Appointment</h1>
             <p class="page-desc" style="margin-bottom: 0;">
-              We look forward to welcoming you to our Johar Town parlour in Gujranwala. Call us directly, send a WhatsApp message, or submit an appointment request.
+              Conveniently located in Johar Town, Gujranwala. Call directly, send a message on WhatsApp, or submit your appointment inquiry below.
             </p>
           </div>
 
           <div class="contact-layout-split">
             <!-- Contact Details Card -->
             <div class="contact-card">
-              <h3 class="font-serif" style="font-size: 1.6rem; color: var(--color-charcoal); margin-bottom: 2rem;">
-                Parlour Details
+              <h3 class="font-serif" style="font-size: 1.5rem; color: var(--color-plum); margin-bottom: 1.75rem;">
+                Parlour Information
               </h3>
 
               <div class="contact-row-item">
                 <div class="contact-bubble-icon"><i class="fa-solid fa-phone"></i></div>
                 <div class="contact-meta-text">
-                  <h4>Contact Number</h4>
+                  <h4>Direct Phone & WhatsApp</h4>
                   <p><a href="tel:03106577782">0310-6577782</a></p>
-                  <small>Tap to place an immediate phone call</small>
+                  <small>Tap to call or message directly for reservations</small>
                 </div>
               </div>
 
               <div class="contact-row-item">
                 <div class="contact-bubble-icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div class="contact-meta-text">
-                  <h4>Location</h4>
+                  <h4>Parlour Location</h4>
                   <p>Johar Town, Gujranwala</p>
-                  <small>Punjab, Pakistan (Comfortable female-only salon)</small>
+                  <small>Punjab, Pakistan (Comfortable, private female-only environment)</small>
                 </div>
               </div>
 
               <div class="contact-row-item">
                 <div class="contact-bubble-icon"><i class="fa-solid fa-clock"></i></div>
                 <div class="contact-meta-text">
-                  <h4>Opening Hours</h4>
+                  <h4>Working Hours</h4>
                   <p>Monday – Sunday: 10:30 AM – 8:30 PM</p>
-                  <small>Early morning bridal sessions arranged by appointment</small>
+                  <small>Early morning bridal appointments scheduled by advance request</small>
                 </div>
               </div>
 
               <div class="direct-contact-buttons">
-                <a href="tel:03106577782" class="btn btn-gold" style="width: 100%;">
-                  <i class="fa-solid fa-phone"></i> Call Now: 0310-6577782
-                </a>
-                <a href="https://wa.me/923106577782?text=Hello%20Tayyaba%20Beauty%20Parlour,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-action" style="width: 100%;">
+                <a href="https://wa.me/923106577782?text=Hello%20Tayyaba%20Beauty%20Parlour,%20I%20want%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-cta" style="width: 100%;">
                   <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (0310-6577782)
+                </a>
+                <a href="tel:03106577782" class="btn btn-plum" style="width: 100%;">
+                  <i class="fa-solid fa-phone"></i> Call Now: 0310-6577782
                 </a>
               </div>
             </div>
 
             <!-- Quick Appointment Request Form -->
             <div class="appointment-card">
-              <h3 class="font-serif" style="font-size: 1.6rem; color: var(--color-charcoal); margin-bottom: 1rem;">
-                Request an Appointment
+              <h3 class="font-serif" style="font-size: 1.5rem; color: var(--color-plum); margin-bottom: 0.85rem;">
+                Online Appointment Request
               </h3>
-              <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.75rem;">
-                Fill out the details below and we will confirm your booking slot via phone or WhatsApp.
+              <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Enter your details to generate an instant booking request sent directly to our WhatsApp coordinator.
               </p>
 
               <form id="bookingForm" onsubmit="submitBooking(event)">
                 <div class="field-group">
                   <label class="field-label" for="userName">Full Name</label>
-                  <input type="text" id="userName" class="field-input" placeholder="e.g. Fatima Ali" required />
+                  <input type="text" id="userName" class="field-input" placeholder="e.g. Zainab Tariq" required />
                 </div>
 
                 <div class="field-group">
-                  <label class="field-label" for="userPhone">Phone Number</label>
+                  <label class="field-label" for="userPhone">Contact Number</label>
                   <input type="tel" id="userPhone" class="field-input" placeholder="e.g. 0300-1234567" required />
                 </div>
 
                 <div class="field-group">
-                  <label class="field-label" for="userService">Service Required</label>
+                  <label class="field-label" for="userService">Selected Service</label>
                   <select id="userService" class="field-input" required>
-                    <option value="Bridal Makeup Artistry">Bridal Makeup Artistry</option>
-                    <option value="Party & Engagement Glam">Party & Engagement Glam</option>
-                    <option value="Facials & Skin Rejuvenation">Facials & Skin Rejuvenation</option>
-                    <option value="Hair Styling & Treatments">Hair Styling & Treatments</option>
-                    <option value="General Beauty Consultation">General Beauty Consultation</option>
+                    <option value="Bridal Makeup Artistry (PKR 15,000 – 35,000)">Bridal Makeup Artistry (PKR 15,000 – 35,000)</option>
+                    <option value="Party & Engagement Glam (PKR 4,500 – 8,500)">Party & Engagement Glam (PKR 4,500 – 8,500)</option>
+                    <option value="Facials & Skin Therapy (PKR 3,500 – 9,500)">Facials & Skin Therapy (PKR 3,500 – 9,500)</option>
+                    <option value="Hair Styling & Treatments (PKR 5,000 – 18,000)">Hair Styling & Treatments (PKR 5,000 – 18,000)</option>
+                    <option value="Custom Beauty Consultation">Custom Beauty Consultation in Johar Town</option>
                   </select>
                 </div>
 
@@ -1761,8 +2362,8 @@
                   <input type="date" id="userDate" class="field-input" required />
                 </div>
 
-                <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 0.5rem;">
-                  <i class="fa-solid fa-paper-plane"></i> Send Request via WhatsApp
+                <button type="submit" class="btn btn-whatsapp-cta" style="width: 100%; margin-top: 0.5rem;">
+                  <i class="fa-brands fa-whatsapp"></i> Send Booking via WhatsApp
                 </button>
               </form>
             </div>
@@ -1774,7 +2375,7 @@
   </main>
 
   <!-- ========================================================================
-       FOOTER (WITH ADDRESS & CONTACT NUMBER)
+       FOOTER
        ======================================================================== -->
   <footer class="footer">
     <div class="container">
@@ -1784,25 +2385,26 @@
           <div class="footer-brand-title">Tayyaba</div>
           <div class="footer-brand-sub">Beauty Parlour</div>
           <p class="footer-desc">
-            Gujranwala's premier bridal studio and skin care sanctuary. Celebrating elegance, quality, and precision artistry in Johar Town.
+            Gujranwala's cherished bridal studio and skin care sanctuary. Celebrating feminine grace through modern techniques, genuine luxury cosmetics, and hospital-grade hygiene.
           </p>
           <a href="tel:03106577782" class="btn-call-nav" style="border-radius: 4px; padding: 0.5rem 1rem; display: inline-flex;">
             <i class="fa-solid fa-phone"></i> 0310-6577782
           </a>
         </div>
 
-        <!-- Tab Links -->
+        <!-- Quick Tab Links -->
         <div>
           <h4 class="footer-heading">Quick Navigation</h4>
           <ul class="footer-tab-links">
             <li><button class="footer-tab-link" onclick="switchTab('home')">Home Overview</button></li>
-            <li><button class="footer-tab-link" onclick="switchTab('services')">Our Services</button></li>
-            <li><button class="footer-tab-link" onclick="switchTab('ai-consultant')">AI Beauty Advisor</button></li>
+            <li><button class="footer-tab-link" onclick="switchTab('services')">Services & Pricing</button></li>
+            <li><button class="footer-tab-link" onclick="switchTab('gallery')">Photo Gallery</button></li>
+            <li><button class="footer-tab-link" onclick="switchTab('ai-advisor')">AI Beauty Advisor</button></li>
             <li><button class="footer-tab-link" onclick="switchTab('contact')">Contact & Appointments</button></li>
           </ul>
         </div>
 
-        <!-- Explicit Address & Contact Required -->
+        <!-- Address & Contact Info -->
         <div>
           <h4 class="footer-heading">Parlour Location</h4>
           <div class="footer-item-row">
@@ -1816,15 +2418,15 @@
           <div class="footer-item-row">
             <i class="fa-solid fa-phone"></i>
             <div>
-              <strong style="color: #FFFFFF; display: block;">Phone Number:</strong>
-              <a href="tel:03106577782" style="color: var(--color-gold-light); font-weight: 600; text-decoration: none;">0310-6577782</a>
+              <strong style="color: #FFFFFF; display: block;">Contact & WhatsApp:</strong>
+              <a href="tel:03106577782" style="color: var(--color-rose-gold); font-weight: 600; text-decoration: none;">0310-6577782</a>
             </div>
           </div>
 
           <div class="footer-item-row">
             <i class="fa-solid fa-clock"></i>
             <div>
-              <strong style="color: #FFFFFF; display: block;">Salon Hours:</strong>
+              <strong style="color: #FFFFFF; display: block;">Salon Timings:</strong>
               Monday – Sunday: 10:30 AM – 8:30 PM
             </div>
           </div>
@@ -1837,53 +2439,73 @@
           &copy; <span id="yearDisplay">2026</span> Tayyaba Beauty Parlour. Johar Town, Gujranwala. All rights reserved.
         </div>
         <div>
-          <span>Johar Town, Gujranwala · Contact: 0310-6577782</span>
+          <span>Johar Town, Gujranwala · Phone: 0310-6577782</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Quick Connect -->
-  <a href="https://wa.me/923106577782?text=Hello%20Tayyaba%20Beauty%20Parlour,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="WhatsApp Tayyaba Beauty Parlour 0310-6577782">
+  <!-- FLOATING WHATSAPP QUICK-BOOKING WIDGET -->
+  <a href="https://wa.me/923106577782?text=Hello%20Tayyaba%20Beauty%20Parlour,%20I%20want%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-widget" aria-label="Book on WhatsApp with Tayyaba Beauty Parlour 0310-6577782">
     <i class="fa-brands fa-whatsapp"></i>
+    <span>Book Appointment</span>
   </a>
 
-  <!-- Toast Feedback Box -->
+  <!-- Lightbox Modal for Gallery -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="Enlarged gallery view" />
+      </div>
+      <div class="lightbox-body">
+        <div>
+          <h4 id="lightboxTitle" class="font-serif" style="font-size: 1.25rem; color: var(--color-plum);">Title</h4>
+          <p id="lightboxCaption" style="font-size: 0.88rem; color: var(--color-text-muted); margin-top: 0.25rem;">Caption</p>
+        </div>
+        <a id="lightboxBookBtn" href="https://wa.me/923106577782?text=Hello%20Tayyaba%20Beauty%20Parlour,%20I%20want%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-cta">
+          <i class="fa-brands fa-whatsapp"></i> Inquire This Look
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
   <div class="toast-box" id="toastBox"></div>
 
   <!-- ========================================================================
-       MODERN JAVASCRIPT: TAB NAVIGATION & AI ADVISOR
+       MODERN JAVASCRIPT: TABS, GALLERY, AI ADVISOR, BOOKING
        ======================================================================== -->
   <script>
-    // Dynamic Year
+    // Set dynamic current year in footer
     document.getElementById('yearDisplay').textContent = new Date().getFullYear();
 
-    // Default min date for appointment picker
-    const userDateInput = document.getElementById('userDate');
-    if (userDateInput) {
-      const todayIso = new Date().toISOString().split('T')[0];
-      userDateInput.min = todayIso;
-      userDateInput.value = todayIso;
+    // Default min date for booking to today
+    const datePicker = document.getElementById('userDate');
+    if (datePicker) {
+      const today = new Date().toISOString().split('T')[0];
+      datePicker.min = today;
+      datePicker.value = today;
     }
 
     // ========================================================================
     // 1. DYNAMIC SINGLE-PAGE TAB SYSTEM
-    // Clicking a navigation tab shows ONLY that specific section and hides all others.
     // ========================================================================
     function switchTab(tabId) {
       // 1. Hide all tab sections
       const allSections = document.querySelectorAll('.tab-section');
       allSections.forEach(sec => sec.classList.remove('active'));
 
-      // 2. Show only the requested target section
-      const targetSection = document.getElementById('tab-' + tabId);
-      if (targetSection) {
-        targetSection.classList.add('active');
+      // 2. Show only requested section
+      const targetSec = document.getElementById('tab-' + tabId);
+      if (targetSec) {
+        targetSec.classList.add('active');
       }
 
-      // 3. Update active states on desktop tab buttons
-      const desktopTabBtns = document.querySelectorAll('.tab-btn');
-      desktopTabBtns.forEach(btn => {
+      // 3. Update desktop active button
+      document.querySelectorAll('.tab-btn').forEach(btn => {
         if (btn.getAttribute('data-tab') === tabId) {
           btn.classList.add('active');
         } else {
@@ -1891,9 +2513,8 @@
         }
       });
 
-      // 4. Update active states on mobile drawer buttons
-      const mobileTabBtns = document.querySelectorAll('.mobile-tab-btn');
-      mobileTabBtns.forEach(btn => {
+      // 4. Update mobile active button
+      document.querySelectorAll('.mobile-tab-btn').forEach(btn => {
         if (btn.getAttribute('data-tab') === tabId) {
           btn.classList.add('active');
         } else {
@@ -1903,16 +2524,16 @@
 
       // 5. Close mobile drawer if open
       const mobileDrawer = document.getElementById('mobileDrawer');
-      const menuToggleIcon = document.getElementById('menuToggleIcon');
+      const menuIcon = document.getElementById('menuToggleIcon');
       if (mobileDrawer && mobileDrawer.classList.contains('open')) {
         mobileDrawer.classList.remove('open');
-        if (menuToggleIcon) {
-          menuToggleIcon.classList.remove('fa-xmark');
-          menuToggleIcon.classList.add('fa-bars');
+        if (menuIcon) {
+          menuIcon.classList.remove('fa-xmark');
+          menuIcon.classList.add('fa-bars');
         }
       }
 
-      // 6. Smooth scroll to top of view
+      // 6. Scroll smoothly to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -1945,19 +2566,11 @@
       }, 4000);
     }
 
-    // Helper: Switch to contact tab and pre-select service
-    function openBookingFor(serviceName) {
-      switchTab('contact');
-      const serviceSelect = document.getElementById('userService');
-      if (serviceSelect) {
-        for (let i = 0; i < serviceSelect.options.length; i++) {
-          if (serviceSelect.options[i].value === serviceName || serviceSelect.options[i].text.includes(serviceName)) {
-            serviceSelect.selectedIndex = i;
-            break;
-          }
-        }
-      }
-      showNotification('Selected service: ' + serviceName);
+    // Helper: Direct WhatsApp Booking for a Specific Service
+    function bookViaWhatsApp(serviceName) {
+      const waText = `Hello Tayyaba Beauty Parlour, I want to book an appointment for ${serviceName} at your Johar Town, Gujranwala salon.`;
+      const url = `https://wa.me/923106577782?text=${encodeURIComponent(waText)}`;
+      window.open(url, '_blank');
     }
 
     // Handle Appointment Form Submission (WhatsApp Redirect)
@@ -1969,7 +2582,7 @@
       const date = document.getElementById('userDate').value;
 
       if (!name || !phone || !date) {
-        showNotification('Please fill in your name, contact, and date.');
+        showNotification('Please fill in your name, contact number, and date.');
         return;
       }
 
@@ -1981,66 +2594,101 @@
         `📍 *Location:* Johar Town, Gujranwala`;
 
       const waLink = `https://wa.me/923106577782?text=${waMsg}`;
-      
-      showNotification('Redirecting to WhatsApp to confirm with 0310-6577782...');
-      
+      showNotification('Opening WhatsApp to confirm appointment with 0310-6577782...');
       setTimeout(() => {
         window.open(waLink, '_blank');
         e.target.reset();
-      }, 700);
+      }, 600);
     }
 
     // ========================================================================
-    // 2. INTERACTIVE AI BEAUTY CONSULTANT ENGINE (NO PRICES LISTED)
+    // 2. GALLERY FILTER & LIGHTBOX MODAL
     // ========================================================================
-    const aiKnowledgeBase = [
+    function filterGallery(category) {
+      // Update active filter button
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    function openLightbox(imgSrc, title, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const titleEl = document.getElementById('lightboxTitle');
+      const captionEl = document.getElementById('lightboxCaption');
+      const bookBtn = document.getElementById('lightboxBookBtn');
+
+      img.src = imgSrc;
+      titleEl.textContent = title;
+      captionEl.textContent = caption;
+
+      const waMessage = `Hello Tayyaba Beauty Parlour, I am inquiring about the ${title} look seen in your gallery.`;
+      bookBtn.href = `https://wa.me/923106577782?text=${encodeURIComponent(waMessage)}`;
+
+      modal.classList.add('open');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.remove('open');
+    }
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // ========================================================================
+    // 3. INTERACTIVE AI BEAUTY ADVISOR
+    // ========================================================================
+    const aiKnowledge = [
       {
-        keywords: ['facial', 'skin', 'dull', 'glow', 'acne', 'tan', 'hydra', 'gold', 'pigmentation', 'brightening'],
-        reply: `For radiant, luminous skin, we offer customized <strong>Hydra-Glow Deep Cleansing</strong>, our opulent <strong>24K Pure Gold Radiance Therapy</strong>, and <strong>Herbal Brightening & Sun-Tan Correction</strong>. Our aestheticians begin every facial with a skin diagnosis to select the optimal botanical serums for your skin barrier. Would you like to reserve a consultation?`,
-        actionText: 'Book Skin Consultation',
-        serviceTarget: 'Facials & Skin Rejuvenation'
+        keywords: ['bridal', 'bride', 'barat', 'walima', 'package', 'price', 'rate', 'cost', 'how much'],
+        reply: `At <strong>Tayyaba Beauty Parlour</strong> in Johar Town, Gujranwala, our signature <strong>Bridal Makeovers range from PKR 15,000 to PKR 35,000</strong>. This includes complete jewelry setting, dupatta pinning, long-wear waterproof HD base with Dior & Huda Beauty, and mink lashes. Would you like to lock in your wedding date via WhatsApp?`,
+        serviceName: 'Bridal Makeup Artistry'
       },
       {
-        keywords: ['bridal', 'bride', 'barat', 'walima', 'mehndi', 'wedding', 'nikkah', 'engagement'],
-        reply: `Congratulations on your upcoming celebration! 💍 At Tayyaba Beauty Parlour in Johar Town, Gujranwala, we specialize in bespoke <strong>Signature Bridal Makeovers</strong> (Barat, Walima, Mehndi & Nikkah). All bridal makeovers include meticulous dupatta setting, heavy jewelry fixing, and long-wear waterproof HD makeup using authentic Dior, MAC, and Huda Beauty cosmetics. We suggest booking your wedding date 4 to 8 weeks in advance!`,
-        actionText: 'Reserve Bridal Date',
-        serviceTarget: 'Bridal Makeup Artistry'
+        keywords: ['party', 'event', 'glam', 'nikkah', 'engagement', 'sister'],
+        reply: `Our <strong>Party & Engagement Glam packages range from PKR 4,500 to PKR 8,500</strong>. Each package includes customized HD skin prep, defined eye styling (smokey or dewy cut-crease), custom lashes, and a runway-ready hairstyle.`,
+        serviceName: 'Party & Engagement Glam'
       },
       {
-        keywords: ['party', 'glam', 'event', 'party makeup', 'eyes', 'contour'],
-        reply: `Our <strong>Party & Engagement Glam</strong> is tailored to your outfit and aesthetic — from soft dewy radiance to striking smoky eye looks with customized lashes. Hair styling is included to give you a polished, runway-ready look for your event!`,
-        actionText: 'Book Party Makeup',
-        serviceTarget: 'Party & Engagement Glam'
+        keywords: ['facial', 'skin', 'dull', 'hydra', 'gold', 'pigmentation', 'brightening', 'acne', 'tan'],
+        reply: `For radiant, clear skin, we offer <strong>Hydra-Glow Cleansing, 24K Gold Therapy, and Herbal Brightening (PKR 3,500 to PKR 9,500)</strong>. Our certified aestheticians evaluate your skin barrier first to ensure no harsh reaction. We recommend scheduling facials 3 to 5 days before your special occasion.`,
+        serviceName: 'Facials & Skin Therapy'
       },
       {
-        keywords: ['hair', 'keratin', 'botox', 'frizz', 'dry', 'smoothing', 'updo', 'waves', 'color', 'balayage'],
-        reply: `For smooth, frizz-free hair, our <strong>Keratin & Hair Botox Smoothing Therapy</strong> locks in intense moisture and mirror-like shine. We also create romantic bridal updos, textured Hollywood waves, and restorative Argan protein hair spas tailored to your hair type.`,
-        actionText: 'Book Hair Treatment',
-        serviceTarget: 'Hair Styling & Treatments'
+        keywords: ['hair', 'keratin', 'rebonding', 'botox', 'frizz', 'dry', 'smoothing', 'spa'],
+        reply: `Our <strong>Keratin & Protein Hair Smoothing treatments range from PKR 5,000 to PKR 18,000</strong> depending on hair length and density. They eliminate 90% of frizz, infuse intense shine, and keep your tresses smooth and manageable for months.`,
+        serviceName: 'Hair Styling & Treatments'
       },
       {
-        keywords: ['price', 'rate', 'cost', 'charges', 'packages', 'how much'],
-        reply: `At Tayyaba Beauty Parlour, our bridal, skin, and hair services are customized based on each client's specific requirements and hair/skin conditions. Please call us directly at <strong>0310-6577782</strong> or visit us in Johar Town, Gujranwala, and our senior aesthetician will provide a personalized consultation and package!`,
-        actionCall: true
-      },
-      {
-        keywords: ['timing', 'time', 'hours', 'open', 'close', 'sunday', 'schedule'],
-        reply: `Tayyaba Beauty Parlour is open <strong>Monday to Sunday from 10:30 AM to 8:30 PM</strong> in Johar Town, Gujranwala. Early morning bridal preparation appointments are gladly accommodated upon advance reservation.`,
-        actionCall: true
+        keywords: ['time', 'timing', 'hours', 'open', 'close', 'sunday', 'schedule'],
+        reply: `Tayyaba Beauty Parlour is open <strong>Monday to Sunday from 10:30 AM to 8:30 PM</strong> in Johar Town, Gujranwala. Early morning bridal preparation appointments are also available with advance booking.`,
+        serviceName: null
       },
       {
         keywords: ['location', 'address', 'where', 'johar town', 'gujranwala', 'direction'],
-        reply: `We are conveniently situated in <strong>Johar Town, Gujranwala, Punjab, Pakistan</strong>. Our salon features private dressing suites and dedicated client parking. Call <strong>0310-6577782</strong> if you need landmark guidance!`,
-        actionCall: true
+        reply: `We are located in <strong>Johar Town, Gujranwala, Punjab, Pakistan</strong>. Our salon has private, comfortable dressing suites and dedicated client parking. Call or WhatsApp <strong>0310-6577782</strong> for landmark directions!`,
+        serviceName: null
       },
       {
         keywords: ['contact', 'phone', 'number', 'whatsapp', 'call'],
-        reply: `You can reach Tayyaba Beauty Parlour directly at <strong>0310-6577782</strong> via regular phone call or WhatsApp. We are delighted to assist you!`,
-        actionCall: true
+        reply: `You can reach Tayyaba Beauty Parlour directly on <strong>0310-6577782</strong> via regular phone call or WhatsApp. We reply promptly during salon hours!`,
+        serviceName: null
       }
     ];
 
-    function appendChatMessage(sender, htmlContent, actionData = null) {
+    function appendChatMessage(sender, htmlContent, actionService = null) {
       const stream = document.getElementById('chatStream');
       const row = document.createElement('div');
       row.className = 'chat-msg-row ' + sender;
@@ -2053,13 +2701,20 @@
       bubble.className = 'chat-msg-bubble';
       bubble.innerHTML = htmlContent;
 
-      if (actionData && sender === 'bot') {
+      if (actionService && sender === 'bot') {
         const btn = document.createElement('button');
         btn.className = 'chat-btn-action';
-        btn.innerHTML = actionData.icon + ' ' + actionData.label;
-        btn.onclick = actionData.handler;
+        btn.innerHTML = '<i class="fa-brands fa-whatsapp text-gold"></i> Book via WhatsApp';
+        btn.onclick = () => bookViaWhatsApp(actionService);
         bubble.appendChild(document.createElement('br'));
         bubble.appendChild(btn);
+      } else if (!actionService && sender === 'bot') {
+        const callBtn = document.createElement('button');
+        callBtn.className = 'chat-btn-action';
+        callBtn.innerHTML = '<i class="fa-solid fa-phone"></i> Call 0310-6577782';
+        callBtn.onclick = () => { window.location.href = 'tel:03106577782'; };
+        bubble.appendChild(document.createElement('br'));
+        bubble.appendChild(callBtn);
       }
 
       row.appendChild(avatar);
@@ -2068,36 +2723,17 @@
       stream.scrollTop = stream.scrollHeight;
     }
 
-    function evaluateQuery(inputQuery) {
-      const q = inputQuery.toLowerCase();
-      for (const item of aiKnowledgeBase) {
+    function evaluateAIResponse(query) {
+      const q = query.toLowerCase();
+      for (const item of aiKnowledge) {
         if (item.keywords.some(k => q.includes(k))) {
-          let actionData = null;
-          if (item.actionCall) {
-            actionData = {
-              label: 'Call 0310-6577782',
-              icon: '<i class="fa-solid fa-phone"></i>',
-              handler: () => { window.location.href = 'tel:03106577782'; }
-            };
-          } else if (item.serviceTarget) {
-            actionData = {
-              label: item.actionText,
-              icon: '<i class="fa-solid fa-calendar-check"></i>',
-              handler: () => { openBookingFor(item.serviceTarget); }
-            };
-          }
-          return { text: item.reply, action: actionData };
+          return { text: item.reply, service: item.serviceName };
         }
       }
 
-      // Default smart conversational fallback
       return {
-        text: `Thank you for reaching out! At <strong>Tayyaba Beauty Parlour</strong> (Johar Town, Gujranwala), every beauty regimen is personalized. Whether you need a bridal makeover, refreshing facial, or hair smoothing, our certified team is ready. Call our senior stylist at <strong>0310-6577782</strong> or let me know what service you are looking for!`,
-        action: {
-          label: 'Call 0310-6577782 Now',
-          icon: '<i class="fa-solid fa-phone"></i>',
-          handler: () => { window.location.href = 'tel:03106577782'; }
-        }
+        text: `Thank you for asking! At <strong>Tayyaba Beauty Parlour</strong> (Johar Town, Gujranwala), all treatments are personalized with 100% original cosmetics and sterilized tools. Whether you're looking for bridal makeovers, rejuvenating facials, or hair treatments, message us directly on WhatsApp or call <strong>0310-6577782</strong>!`,
+        service: null
       };
     }
 
@@ -2111,16 +2747,16 @@
       input.value = '';
 
       setTimeout(() => {
-        const response = evaluateQuery(query);
-        appendChatMessage('bot', response.text, response.action);
+        const res = evaluateAIResponse(query);
+        appendChatMessage('bot', res.text, res.service);
       }, 350);
     }
 
     function handlePromptClick(promptText) {
       appendChatMessage('user', promptText);
       setTimeout(() => {
-        const response = evaluateQuery(promptText);
-        appendChatMessage('bot', response.text, response.action);
+        const res = evaluateAIResponse(promptText);
+        appendChatMessage('bot', res.text, res.service);
       }, 300);
     }
   </script>
