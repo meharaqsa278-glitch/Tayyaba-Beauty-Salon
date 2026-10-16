@@ -438,8 +438,8 @@
       padding: 4.5rem 0;
       width: 100%;
       max-width: 100%;
-      background: linear-gradient(135deg, rgba(42, 26, 46, 0.9) 0%, rgba(30, 17, 34, 0.76) 100%),
-                  url('/src/assets/images/hero_beauty_parlour_1792162870449.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                  url('https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;
       color: #FFFFFF;
       border-bottom: 1px solid var(--color-border);
     }
@@ -754,7 +754,7 @@
       flex-shrink: 0;
     }
 
-    /* Fixed Card Pricing Bar without negative margin overflow */
+    /* Card Action Footer Bar without negative margin overflow */
     .card-pricing-bar {
       display: flex;
       align-items: center;
@@ -763,26 +763,19 @@
       border-top: 1px solid var(--color-border);
       background: #FAF6F3;
       margin-top: auto;
-      padding: 1.15rem 1.35rem;
+      padding: 1.1rem 1.35rem;
       border-radius: var(--radius-sm);
       width: 100%;
       max-width: 100%;
     }
 
-    .price-meta-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+    .service-status-tag {
+      font-size: 0.86rem;
+      font-weight: 500;
       color: var(--color-text-muted);
-      display: block;
-    }
-
-    .price-value-tag {
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--color-plum);
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     /* ==========================================================================
@@ -1846,7 +1839,7 @@
                 <i class="fa-brands fa-whatsapp"></i> Book Appointment (WhatsApp)
               </a>
               <button class="btn btn-outline-rose" onclick="switchTab('services')">
-                <i class="fa-solid fa-spa"></i> View Services & Rates
+                <i class="fa-solid fa-spa"></i> View Services
               </button>
               <button class="btn btn-plum" onclick="switchTab('gallery')">
                 <i class="fa-solid fa-images text-gold"></i> View Gallery
@@ -1919,11 +1912,11 @@
         <div class="container">
           <div class="teaser-grid-3">
             <div class="teaser-card">
-              <span class="section-kicker">Signature Services</span>
-              <h3>Explore Our Rates & Packages</h3>
-              <p>Browse our transparent service offerings including Barat bridal makeup, engagement glam, Hydra-Glow facials, and protein hair spa treatments.</p>
+              <span class="section-kicker">Signature Offerings</span>
+              <h3>Bespoke Beauty Treatments</h3>
+              <p>Browse our signature beauty services including Barat bridal makeovers, festive engagement glam, Hydra-Glow facials, and protein hair spa treatments.</p>
               <button class="btn btn-plum" onclick="switchTab('services')" style="width: 100%;">
-                <span>View All Services</span>
+                <span>Explore All Services</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -1953,16 +1946,16 @@
     </div>
 
     <!-- ======================================================================
-         TAB 2: SERVICES SECTION (WITH CLEAR PRICES / PRICE RANGES)
+         TAB 2: SERVICES SECTION (NO PRICES DISPLAYED)
          ====================================================================== -->
     <div class="tab-section" id="tab-services">
       <div class="services-page">
         <div class="container">
           <div style="text-align: center; max-width: 740px; margin: 0 auto 3rem auto;">
-            <span class="section-kicker">Transparent Offerings</span>
-            <h1 class="page-title">Curated Beauty Services & Pricing</h1>
+            <span class="section-kicker">Signature Artistry</span>
+            <h1 class="page-title">Curated Beauty Services</h1>
             <p class="page-desc" style="margin-bottom: 0;">
-              Explore our luxury beauty treatments crafted with original cosmetics and sterilized tools. All rates are listed transparently with no hidden fees.
+              Explore our luxury beauty treatments crafted with certified original cosmetics and hospital-grade sterilized tools. Contact us directly on WhatsApp for tailored bridal packages and personalized consultations.
             </p>
           </div>
 
@@ -1985,12 +1978,12 @@
                   <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Premium Mink Lash Application & Custom Contour</li>
                 </ul>
                 <div class="card-pricing-bar">
-                  <div>
-                    <span class="price-meta-label">Package Range</span>
-                    <span class="price-value-tag">PKR 15,000 – 35,000</span>
+                  <div class="service-status-tag">
+                    <i class="fa-solid fa-gem text-gold"></i>
+                    <span>Bespoke Bridal Package</span>
                   </div>
-                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Bridal Makeup Artistry (PKR 15,000 – 35,000)')">
-                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Bridal Makeup Artistry')">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
                   </button>
                 </div>
               </div>
@@ -2014,12 +2007,12 @@
                   <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Long-Lasting Waterproof Setting Spray</li>
                 </ul>
                 <div class="card-pricing-bar">
-                  <div>
-                    <span class="price-meta-label">Package Range</span>
-                    <span class="price-value-tag">PKR 4,500 – 8,500</span>
+                  <div class="service-status-tag">
+                    <i class="fa-regular fa-clock text-gold"></i>
+                    <span>Advance Booking Available</span>
                   </div>
-                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Party & Engagement Glam (PKR 4,500 – 8,500)')">
-                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Party & Engagement Glam')">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
                   </button>
                 </div>
               </div>
@@ -2043,12 +2036,12 @@
                   <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Ultrasonic Blackhead Extraction & Collagen Mask</li>
                 </ul>
                 <div class="card-pricing-bar">
-                  <div>
-                    <span class="price-meta-label">Package Range</span>
-                    <span class="price-value-tag">PKR 3,500 – 9,500</span>
+                  <div class="service-status-tag">
+                    <i class="fa-solid fa-leaf text-gold"></i>
+                    <span>Includes Skin Diagnostic</span>
                   </div>
-                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Facials & Skin Therapy (PKR 3,500 – 9,500)')">
-                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Facials & Skin Therapy')">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
                   </button>
                 </div>
               </div>
@@ -2072,12 +2065,12 @@
                   <li class="treatment-feature-item"><i class="fa-solid fa-check"></i> Balayage, Streaking & Gloss Toner Application</li>
                 </ul>
                 <div class="card-pricing-bar">
-                  <div>
-                    <span class="price-meta-label">Package Range</span>
-                    <span class="price-value-tag">PKR 5,000 – 18,000</span>
+                  <div class="service-status-tag">
+                    <i class="fa-solid fa-scissors text-gold"></i>
+                    <span>Customized Hair Therapy</span>
                   </div>
-                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Hair Styling & Treatments (PKR 5,000 – 18,000)')">
-                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+                  <button class="btn btn-whatsapp-cta" onclick="bookViaWhatsApp('Hair Styling & Treatments')">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
                   </button>
                 </div>
               </div>
@@ -2209,16 +2202,16 @@
 
               <span class="prompt-suggestions-title">Tap to Inquire Instantly</span>
               <div class="prompt-buttons-stack">
-                <button class="prompt-chip" onclick="handlePromptClick('What are your bridal makeup packages and prices?')">
-                  <span>Bridal packages & prices?</span>
+                <button class="prompt-chip" onclick="handlePromptClick('What is included in your signature bridal makeup packages?')">
+                  <span>Bridal makeup & styling?</span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </button>
                 <button class="prompt-chip" onclick="handlePromptClick('Which facial is best for dull or pigmented skin?')">
                   <span>Facial for dull skin?</span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </button>
-                <button class="prompt-chip" onclick="handlePromptClick('What is the cost of keratin hair smoothing treatment?')">
-                  <span>Keratin treatment cost?</span>
+                <button class="prompt-chip" onclick="handlePromptClick('How is the keratin hair smoothing treatment done?')">
+                  <span>Keratin smoothing details?</span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </button>
                 <button class="prompt-chip" onclick="handlePromptClick('What are your salon opening timings and address in Gujranwala?')">
@@ -2397,7 +2390,7 @@
           <h4 class="footer-heading">Quick Navigation</h4>
           <ul class="footer-tab-links">
             <li><button class="footer-tab-link" onclick="switchTab('home')">Home Overview</button></li>
-            <li><button class="footer-tab-link" onclick="switchTab('services')">Services & Pricing</button></li>
+            <li><button class="footer-tab-link" onclick="switchTab('services')">Services & Artistry</button></li>
             <li><button class="footer-tab-link" onclick="switchTab('gallery')">Photo Gallery</button></li>
             <li><button class="footer-tab-link" onclick="switchTab('ai-advisor')">AI Beauty Advisor</button></li>
             <li><button class="footer-tab-link" onclick="switchTab('contact')">Contact & Appointments</button></li>
@@ -2653,22 +2646,22 @@
     const aiKnowledge = [
       {
         keywords: ['bridal', 'bride', 'barat', 'walima', 'package', 'price', 'rate', 'cost', 'how much'],
-        reply: `At <strong>Tayyaba Beauty Parlour</strong> in Johar Town, Gujranwala, our signature <strong>Bridal Makeovers range from PKR 15,000 to PKR 35,000</strong>. This includes complete jewelry setting, dupatta pinning, long-wear waterproof HD base with Dior & Huda Beauty, and mink lashes. Would you like to lock in your wedding date via WhatsApp?`,
+        reply: `At <strong>Tayyaba Beauty Parlour</strong> in Johar Town, Gujranwala, our signature <strong>Bridal Makeovers</strong> are tailored to your bridal lehenga, event schedule, and preferences. Packages include complete jewelry setting, dupatta pinning, long-wear waterproof HD airbrush base with Dior & Huda Beauty, and mink lashes. Would you like to consult directly via WhatsApp?`,
         serviceName: 'Bridal Makeup Artistry'
       },
       {
         keywords: ['party', 'event', 'glam', 'nikkah', 'engagement', 'sister'],
-        reply: `Our <strong>Party & Engagement Glam packages range from PKR 4,500 to PKR 8,500</strong>. Each package includes customized HD skin prep, defined eye styling (smokey or dewy cut-crease), custom lashes, and a runway-ready hairstyle.`,
+        reply: `Our <strong>Party & Engagement Glam services</strong> are customized for your occasion. Each session includes customized HD skin prep, defined eye styling (smokey or dewy shimmer), mink lashes, and a couture hairstyle (curls, blowdry, or updo).`,
         serviceName: 'Party & Engagement Glam'
       },
       {
         keywords: ['facial', 'skin', 'dull', 'hydra', 'gold', 'pigmentation', 'brightening', 'acne', 'tan'],
-        reply: `For radiant, clear skin, we offer <strong>Hydra-Glow Cleansing, 24K Gold Therapy, and Herbal Brightening (PKR 3,500 to PKR 9,500)</strong>. Our certified aestheticians evaluate your skin barrier first to ensure no harsh reaction. We recommend scheduling facials 3 to 5 days before your special occasion.`,
+        reply: `For radiant, clear skin, we offer <strong>Hydra-Glow Deep Cleansing, 24K Luxury Gold Leaf Therapy, and Organic Brightening</strong>. Our certified aestheticians evaluate your skin barrier first to ensure optimal glow and no harsh reactions. We recommend scheduling facials 3 to 5 days before your special occasion.`,
         serviceName: 'Facials & Skin Therapy'
       },
       {
         keywords: ['hair', 'keratin', 'rebonding', 'botox', 'frizz', 'dry', 'smoothing', 'spa'],
-        reply: `Our <strong>Keratin & Protein Hair Smoothing treatments range from PKR 5,000 to PKR 18,000</strong> depending on hair length and density. They eliminate 90% of frizz, infuse intense shine, and keep your tresses smooth and manageable for months.`,
+        reply: `Our <strong>Keratin & Protein Hair Smoothing treatments</strong> are tailored to your exact hair length, density, and condition. They eliminate 90% of frizz, infuse intense shine, and keep your tresses smooth and manageable for months.`,
         serviceName: 'Hair Styling & Treatments'
       },
       {
