@@ -1,0 +1,6 @@
+{
+  "name": "Tayyaba Beauty Parlour",
+  "description": "Luxurious beauty parlour and bridal salon in Johar Town, Gujranwala featuring bridal makeup, skincare facials, hair styling, and an interactive AI beauty consultant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
